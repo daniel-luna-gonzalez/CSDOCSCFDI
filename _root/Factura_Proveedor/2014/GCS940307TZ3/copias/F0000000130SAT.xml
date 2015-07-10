@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RespuestaSAT>
+  <WebService>https://consultaqr.facturaelectronica.sat.gob.mx/ConsultaCFDIService.svc?wsdl</WebService>
+  <EmisorRfc>BEC990723MJ2</EmisorRfc>
+  <ReceptorRFC>GCS940307TZ3</ReceptorRFC>
+  <FechaHoraEnvio>2015-04-27 16:49:51</FechaHoraEnvio>
+  <FechaHoraRespuesta>2015-04-27 16:49:55</FechaHoraRespuesta>
+  <TotalFactura>515813.89</TotalFactura>
+  <UUID>B15BEA8D-0F61-4FDA-B96F-0CE42DA9A448</UUID>
+  <CodigoEstatus>S - Comprobante obtenido satisfactoriamente.</CodigoEstatus>
+  <Estado>Vigente</Estado>
+  <AcuseRecibo>e6d2a588add4258693eee2cc235500ba</AcuseRecibo>
+</RespuestaSAT>

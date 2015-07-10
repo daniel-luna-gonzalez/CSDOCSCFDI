@@ -1,0 +1,95 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>tooltip demo</title>
+
+<!--  Simulación de Sistema Operativo -->
+<script type="text/javascript" src="media/js/jquery-1.7.1.min.js"></script>
+<!--<script type="text/javascript" src="media/js/jquery-ui-1.8.17.custom.min.js"></script><!--efectos dock-->
+<script type="text/javascript" src="media/js/modernizr.js"></script>
+<script type="text/javascript" src="res/js/alta_sistema.js"></script>
+<script type="text/javascript" src="res/js/fix-and-clock.js"></script>
+<script type="text/javascript" src="res/js/login.js"></script>
+<link rel="stylesheet" type="text/css" media="screen" href="res/css/style.css"/>
+<link rel="stylesheet" type="text/css" media="screen" href="res/css/preview_recibo.css"/>
+<!--*****************************Scripts para dialogs modales *************************-->
+<!--  Operaciones a Base de Datos y herramientas-->
+<script type="text/javascript" src="res/js/carga_masiva.js"></script>
+<script type="text/javascript" src="res/js/busqueda.js"></script>
+<script type="text/javascript" src="res/js/preview.js"></script>
+<script type="text/javascript" src="res/js/listado_empleado_detalle.js"></script>
+<script type="text/javascript" src="res/js/barra_herramientas.js"></script>
+<script type="text/javascript" src="res/js/ayuda.js"></script>
+<!--  Consola de administración -->
+<script type="text/javascript" src="res/js/administracion.js"></script>
+<!--*************** Arbol *****************-->
+<script src="media/js/jquery-ui.custom.js" type="text/javascript"></script> 
+<!--*****************************Dialogos modales******************************* -->
+<link rel="stylesheet" href="res/css/jquery-ui.css" />
+<script src="media/dialog/jquery-1.10.2.js"></script>
+<script src="media/dialog/jquery-ui-1.10.4.custom.js"></script>
+<script type="text/javascript" src="media/jquery-dialog/jquery.dialogextend.js"></script>
+<!--***************************** tooltip **************************-->
+<!--<script type="text/javascript" src="media/tooltip/jquery.tools.min.js"></script>-->
+<!--*************** Arbol *****************-->
+ <link href="media/css/skin-vista/ui.dynatree.css" rel="stylesheet" type="text/css">
+<script src="media/arbol/jquery.dynatree.js" type="text/javascript"></script>
+<!--*************** Tabla con Paginado y búsqueda *****************-->
+<link rel="stylesheet" type="text/css" media="screen" href="media/datatable/css/dataTables.tableTools.css"/>
+<link rel="stylesheet" type="text/css" media="screen" href="media/css/jquery.dataTables_themeroller.css"/>
+<link rel="stylesheet" type="text/css" media="screen" href="res/css/datatables.css"/>
+
+<script type="text/javascript" charset="utf-8" src="media/datatable/media/js/jquery.dataTables.js"></script>
+<script type="text/javascript" charset="utf-8" src="media/datatable/js/dataTables.tableTools.js"></script>
+<!--*********************************Mail************************************** -->
+<link rel="stylesheet" type="text/css" media="screen" href="res/css/estilos.css"/>
+<link href="res/css/alta_usuarios.css" rel="stylesheet" type="text/css">
+<!--*****************imprimir **************-->
+<script type="text/javascript" charset="utf-8" src="media/js/jquery.PrintArea.js"></script>
+<!--<script src="http://cdn.jquerytools.org/1.2.7/full/jquery.tools.min.js"></script>-->
+
+<link href="media/gips/css/gips.css" rel="stylesheet" type="text/css" />
+<script src="media/gips/js/gips.js" type="text/javascript"></script>
+<style>
+    #tabs-movie {
+    border: none;
+    padding: 0;
+}
+</style>    
+<script>
+$(document).ready(function() {
+    $('#tabs-movie').tabs();
+
+    $('#dialog-movie-info').dialog({
+        closeOnEscape: false,
+        draggable: false,
+        resizable: true,
+        open: function() {
+            $(this).find('.ui-dialog-titlebar-close').blur();
+        }
+    }).parent().find('.ui-dialog-titlebar-close').prependTo('#tabs-movie').closest('.ui-dialog').children('.ui-dialog-titlebar').remove();
+});
+  </script>
+</head>
+<body>
+<button id="tabtest" class="ui-button ui-state-default ui-corner- 
+all">tabtest</button> 
+    
+<div id="dialog-movie-info">
+  <div id="tabs-movie">
+    <ul>
+      <li><a href="#tab-info"><img src="template/images/icon-block.png" alt="" />Information</a></li>
+      <li><a href="#tab-cast"><img src="template/images/icon-block.png" alt="" />Cast List</a></li>
+    </ul>
+    <div id="tab-info"></div>
+    <div id="tab-cast">
+      <em>Cast Tab!</em>
+    </div>
+  </div>
+</div>
+ 
+</body>
+</html>
+</body>
+</html>

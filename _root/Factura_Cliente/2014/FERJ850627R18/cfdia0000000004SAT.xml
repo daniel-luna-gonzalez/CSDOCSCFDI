@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RespuestaSAT>
+  <WebService>https://consultaqr.facturaelectronica.sat.gob.mx/ConsultaCFDIService.svc?wsdl</WebService>
+  <EmisorRfc>AIC911114399</EmisorRfc>
+  <ReceptorRFC>FERJ850627R18</ReceptorRFC>
+  <FechaHoraEnvio>2015-04-27 23:54:09</FechaHoraEnvio>
+  <FechaHoraRespuesta>2015-04-27 23:54:10</FechaHoraRespuesta>
+  <TotalFactura>23200.00</TotalFactura>
+  <UUID>AE428416-F6A8-4ED2-BE22-E07F62B87ECD</UUID>
+  <CodigoEstatus>S - Comprobante obtenido satisfactoriamente.</CodigoEstatus>
+  <Estado>Vigente</Estado>
+  <AcuseRecibo>48a69d2d6123f72b0cff5a48c2bb1b17</AcuseRecibo>
+</RespuestaSAT>

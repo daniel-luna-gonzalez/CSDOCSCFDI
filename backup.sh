@@ -1,0 +1,1 @@
+shell> mysql --user root --password=myrootpassword new_db < db_test.sql

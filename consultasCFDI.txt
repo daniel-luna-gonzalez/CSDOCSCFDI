@@ -1,0 +1,9 @@
+/usr/syno/etc/rc.d/S99CFDI.sh stop
+cp /volume1/public/S99CFDI.sh /usr/syno/etc/rc.d
+nohup php /volume1/web/Services/MotorCorreos.php &
+cp /volume1/public/contab /etc/
+/usr/syno/sbin/synoservicectl --restart crond
+
+S99CSDocsLite.sh start
+cp /volume1/public/S99CSDocsLite.sh /usr/syno/etc/rc.d
+

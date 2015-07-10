@@ -1,0 +1,904 @@
+/* Font Table Receptor (Preview) */
+.FontTableReceptor
+{
+    color: #464663;
+}
+
+.FormEstandar
+{
+/*    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;*/
+    font-family: Verdana,Arial,sans-serif; 
+    font-size: 13px;
+    width: 300px;
+    height: 20px;
+    margin-left: 20px; 
+    margin-top: 10px;
+
+}
+
+
+/*******************************Ventana de Resultados *************************/
+#ventana_resultado{
+    overflow: auto;
+    width: 300px;
+    height: 500px;
+}
+
+/********************************* Acuse de Recíbo *****************************/
+#contenedor_acuse .opciones_acuse{
+    top: 0px;
+    width: 100%;
+    text-align: right;
+    height: 25px;
+}
+#contenedor_acuse .opciones_acuse input button{
+    
+    
+}
+
+#contenedor_acuse div.titulo_acuse{
+    top: 30px;
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    font-size: 20px;
+    font-family: Verdana,Arial,sans-serif; 
+    color:#0088e3
+}
+#contenedor_acuse .contenido_acuse{
+    border-bottom: 20px solid #488abb;
+    border-top: 20px solid #488abb;
+}
+#contenedor_acuse .contenido_acuse table tr:nth-child(odd){
+  background-color:#e3e5ff;
+}
+#contenedor_acuse .contenido_acuse table tr:nth-child(even){
+background-color:#FFFFFF;
+}
+
+
+#contenedor_acuse table{
+    margin-top: 10px;
+}
+
+#contenedor_acuse .contenido_acuse table td{
+vertical-align: middle;
+font-size: 14px;
+font-family: Verdana,Arial,sans-serif; 
+height: 30px;
+min-width: 150px;
+
+}
+
+/************************** Contenedor de Selección ***************************/
+#contenedor_seleccion{
+    
+}
+/*#contenedor_seleccion .clean_icon_seleccion{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}*/
+#contenedor_seleccion .mensaje_content_selección{
+    position: absolute;
+    top: 35%;
+    width: 95%;
+    text-align: center;
+    color: #505a64;
+    font-size: 16px;
+}
+#tabla_seleccion{
+font-family: Verdana,Arial,sans-serif; 
+
+}
+#tabla_seleccion{
+position: absolute;
+font-size: 13px;
+width: 95%;
+top: 40px;
+}
+#tabla_seleccion td{
+    margin-left: 3px;
+    margin-right: 3px;
+    font-family: Verdana,Arial,sans-serif; 
+    padding:.4em .2em;
+    font-style: normal;
+    list-style: none;
+    border-collapse: collapse; margin:0 0 .4em;
+    border: 1px solid #b5b5b5;
+    text-align: center;
+}
+#tabla_seleccion th{
+    min-width: 50px;
+    border-bottom: 1px solid #336699;
+}
+
+/*Alternar colores tabla listado de selección */
+#tabla_seleccion tr:nth-child(odd) {
+   background-color: #e3e5ff;
+   /*color:#777*/
+}
+
+#tabla_seleccion tr:nth-child(even) {
+   background-color: #FFFFFF;
+   /*color:white;*/
+}
+
+#tabla_seleccion th {
+   background-color: #488abb;
+   color:white;
+   height: 40px;
+   text-align: center;
+   vertical-align: central;
+   font-size: 15px;
+}
+
+
+
+/******************** tooltip Seleccion de documentos***********************/
+.tooltip {
+    background-color:#000;
+    border:1px solid #fff;
+    padding:10px 15px;
+    width:200px;
+    display:none;
+    color:#fff;
+    text-align:left;
+    font-size:12px;
+    
+    /* outline radius for mozilla/firefox only */
+    -moz-box-shadow:0 0 10px #000;
+    -webkit-box-shadow:0 0 10px #000;
+}
+
+.celda_oculta_xml{
+    display: none;
+}
+.celda_oculta_pdf{
+    display:none;
+}
+.celda_oculta_acuse{
+    display:none;
+}
+
+/******************* Ventana de Estatus del Sistema****************************/
+.tabla_status td{
+    vertical-align: middle;
+}
+#status_sistema{
+    font-size: 14px;
+    font-family: Verdana,Arial,sans-serif; 
+}
+
+.tabla_status .celda_boton_status_coflicto{
+    border-top: 1px solid #c8d1db;    
+    height: 70px;
+    vertical-align: middle;
+}
+
+#status_sistema .mensaje_estatus
+{
+    font-size: 22px;
+    color: #1ca600;
+}
+#status_sistema .mensaje_estatus_error
+{
+    font-size: 22px;
+    color: red;
+}
+
+#status_sistema #loading_status_sistema{
+    position: absolute;
+    left: 45%;
+    top: 45%;
+    width: 60px;
+    height: 60px;        
+}
+#boton_status_solucion{
+    width: 250px;
+    height: 40px;
+    font-size: 18px;
+}
+
+
+/************************** Ventana de Ayuda **********************************/
+#ayuda_caja_busqueda
+{
+    width: 246px;
+    height: 23px;
+    font-size: 14px;
+}
+.buscar_ayuda
+{
+    display: none;
+}
+#ventana_ayuda{ 
+    /*background-color: #4189c3;*/
+}
+#menu_ayuda
+{
+    width: 250px;
+    left: 0px;
+    top: 10px;
+    height: 95%;
+    border-right: 2.5px solid #e0e0e0;
+    position: absolute;
+    overflow: auto;
+    margin-right: 3px;    
+}
+#menu_ayuda #menu_manual_usuario{
+    top:50px;
+}
+#menu_manual_usuario table td{          
+   
+    vertical-align: middle;    
+    -webkit-border-radius: 2px;  
+    -moz-border-radius: 2px;  
+    border-radius: 2px; 
+}
+
+#menu_manual_usuario table tr{
+    height: 30px;
+    font-size: 14px;
+    color:#505a63;
+    vertical-align: middle;           
+/*        -webkit-border-radius: 80px;  
+    -moz-border-radius: 80px;  
+    border-radius: 80px; */
+}
+
+
+
+#menu_manual_usuario table tr.sobre_celda{
+    background-color: #c4e5f2;
+/*    color:#6a95b8;*/
+    cursor: pointer; 
+    
+}
+
+#menu_manual_usuario table tr.celda_seleccionada
+{
+    background-color: #0086e6;
+    color: #fff;
+    cursor: pointer; 
+}
+.titulo_ayuda{
+    width: 100%;
+    border-bottom: 1.5px solid #d8e1eb;
+    height: 20px;
+    font-size: 15px;
+    color: #0088e3;
+    top: 30px;
+    display: block;
+    
+}
+
+#menu_manual_usuario table td.celda_seleccionada{
+/*    color: #fff;*/
+
+}
+#ayuda_contenido{
+    top: 10px;
+    width: 65%;
+    left: 33%;
+    height: 95%;
+    position: absolute;
+    overflow: auto;
+    font-size: 14px;
+}
+#ayuda_contenido p{
+    margin-bottom: 3px;
+    margin-top: 3px;
+    line-height: 20px;
+    
+}
+
+.titulos_ventanas
+{
+    width: 100%;
+    border-bottom: 1.5px dashed #d8e1eb;
+    height: 20px;
+    font-size: 15px;
+    color: #0088e3;
+    top: 5px;
+    display: block;
+}
+/*#admin_ventana_trabajo{
+    font-size: 15px;
+}*/
+
+.zoom{
+    transition: 3s ease;
+    -moz-transition: 3s ease; /* Firefox */
+    -webkit-transition: 3s ease; /* Chrome - Safari */
+    -o-transition: 3s ease; /* Opera */
+}
+.zoom:hover
+{
+    cursor: pointer;
+    transform : scale(1.16);
+    -moz-transform : scale(1.16); /* Firefox */
+    -webkit-transform : scale(1.16); /* Chrome - Safari */
+    -o-transform : scale(1.6); /* Opera */
+    -ms-transform : scale(1.6); /* IE9 */
+}
+/************************Contenedor Carga masiba*/
+.contenedor_carga
+{
+    overflow:auto;
+    width: 90%;
+    height: 98%;
+    position: absolute;
+    font-family: Verdana,Arial,sans-serif; 
+    font-size: 13px;   
+    display: block;
+}
+.contenedor_carga .icono_carga{
+margin:0 auto 0 auto;
+top: 20%;
+width:95%;
+position: absolute;
+text-align: center;
+display: block;
+}
+.contenedor_carga .icono_carga img{
+    width: 100px;
+    height: 120px;   
+}
+
+.contenedor_carga .contenedor_salida{
+    display:  block;
+    width: 95%;
+    height: 18%;
+    top: 80%;
+    position: absolute;    
+    overflow: auto;
+    
+}
+
+.contenedor_carga .browser_carga input
+{
+    position: absolute;
+/*   -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;*/
+    font-family: Verdana,Arial,sans-serif; 
+    font-size: 12px;
+    width: 270px;
+    height: 27px;
+    top: 60%;
+    border-left: .5px solid #c8d1db;
+    border-top: 2px solid #c8d1db;   
+    display: block;
+}
+/***************************** Contenedores  ***********************************/
+.barra_botones{
+margin:0 auto 0 auto;
+top: 4%;
+left:31%;
+width:68%;
+position: absolute;
+text-align: center;
+}
+
+.contenedor_administracion{  
+    position: absolute;
+    width: 98%;
+    height: 97%;
+    /*background-image:url(../img/fondo_mac1.jpg);*/ 
+}
+.contenedor_busqueda{
+   position:absolute;
+   width:300px;
+   height:23.3%;
+   left: 1%;
+   top:40px; 
+/*   background: -webkit-linear-gradient(rgba(233, 233, 233, 1.0), rgba(178, 178, 178, 1.0) 0px, #FFFFFF, #FFFFFF 0px);
+   background: -moz-linear-gradient(rgba(233, 233, 233, 1.0), rgba(178, 178, 178, 1.0) 0px, #FFFFFF, #FFFFFF 0px);*/
+   /*border-radius: 5px;*/
+   /*box-shadow:inset 0 2px 0 rgba(255,255,255,.6), 0 3px 5px 5px rgba(0,0,0,0.56), 0 0 0 1px rgba(0, 0, 0, 0.3);*/
+   /*opacity:100;*/
+   /*background-image:url(../img/background.png);*/      
+   font-family: Verdana,Arial,sans-serif; 
+   font-size: 14px;
+}
+.contenedor_busqueda table tr{
+    /*border: 1px solid #000000;*/
+    
+}
+.contenedor_busqueda table td{
+    /*border: 1px solid #000000;*/
+    height: 27px;
+/*    text-align: center;*/
+}
+.contenedor_busqueda .fecha_busqueda{
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    font-family: Verdana,Arial,sans-serif; 
+    font-size: 13px;
+    width: 220px;
+    height: 24px;
+     margin-left: 20px; 
+    border-left: .5px solid #c8d1db;
+    border-top: 2px solid #c8d1db;    
+    cursor: pointer;
+    
+}
+.contenedor_busqueda .x_fecha_busqueda{  
+    cursor: pointer;
+}
+.contenedor_busqueda .form_busqueda{
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    font-family: Verdana,Arial,sans-serif; 
+    font-size: 13px;
+    width: 240px;
+    height: 30px;
+     margin-left: 20px; 
+    border-left: .5px solid #c8d1db;
+    border-top: 2px solid #c8d1db;    
+    
+}
+.contenedor_busqueda .select_lista_empresa{
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    font-family: Verdana,Arial,sans-serif; 
+    font-size: 13px;
+    width: 245px;
+    height: 30px;
+     margin-left: 20px; 
+    border-left: .5px solid #c8d1db;
+    border-top: 2px solid #c8d1db;    
+}
+.contenedor_arbol{
+    border: 1px solid #b6d8f0;
+    background-color: #f2faff;
+   position:absolute;
+   overflow:auto;
+   width:350px;    
+   top:230px;
+    bottom: 0px;
+   overflow-x: scroll;
+/*   background: -webkit-linear-gradient(rgba(233, 233, 233, 1.0), rgba(178, 178, 178, 1.0) 0px, #FFFFFF, #FFFFFF 0px);
+   background: -moz-linear-gradient(rgba(233, 233, 233, 1.0), rgba(178, 178, 178, 1.0) 0px, #FFFFFF, #FFFFFF 0px);
+   box-shadow:inset 0 2px 0 rgba(255,255,255,.6), 0 2px 5px 5px rgba(0,0,0,0.56), 0 0 0 1px rgba(0, 0, 0, 0.3);*/
+   opacity:100;
+   
+   /*position:relative;*/
+   /*background-image:url(../img/background.png);*/ 
+   
+       
+}
+.contenedor_listado{
+    overflow:auto;
+    position:absolute;
+    top:70px;
+    left:370px;
+    right: 0px;
+    bottom: 0px;
+    
+}
+
+.contenedor_listado input[type="checkbox"] {
+   transform:scale(1.5,1.5);
+   -ms-transform:scale(1.5,1.5); /* IE 9 */
+   -moz-transform:scale(1.5,1.5); /* Firefox */
+   -webkit-transform:scale(1.5,1.5); /* Safari and Chrome */
+   -o-transform:scale(1.5,1.5); /* Opera */
+}
+
+.subtitulo_content1{
+    position: absolute;
+    left: 31%;
+    width: 68%;
+    margin:0 auto 0 auto;
+    border-bottom: 1.5px dashed #d8e1eb;
+    top: 1.5%;
+    color: #0088e3;
+    font-size: 15px;
+/*    text-align: center;*/    
+}
+
+.subtitulo_content2{
+    position: absolute;
+    left: 31%;
+    width: 68%;
+    /*margin:0 auto 0 auto; width:100%;*/
+    border-bottom: 1.5px dashed #d8e1eb;
+    top: 40%;
+    color: #0088e3;
+    font-size: 15px;
+/*    text-align: center;*/    
+}
+
+.subtitulo_content3{
+    position: absolute;
+    /*left: 2%;*/
+    top: 1.5%;
+    width: 30%;
+    /*margin:0 auto 0 auto; width:100%;*/
+    border-bottom: 1.5px dashed #d8e1eb;
+    color: #0088e3;
+    font-size: 15px;
+}
+
+
+
+
+.texto_select_empresa{    
+    /*border-radius: 3px;*/
+    /*display: block;*/
+    /*font-family: cfdi;*/
+    font-size: 13px;
+    /*color:white;*/
+    /*padding: 13px;*/   
+    width: 433px;     
+    font-family: Verdana,Arial,sans-serif; 
+}
+
+
+
+.boton_busqueda{
+    text-align: right;
+    font-family: Verdana,Arial,sans-serif; 
+}
+
+
+
+.text_form h2 {
+
+    background: none repeat scroll 0 0 #F3F3F3;
+    border-radius: 5px;
+    color: #5CD053;
+    display: block;
+    font-family: Verdana,Arial,sans-serif; 
+    font-size: 20px;
+    padding: 5px;
+    text-shadow: 1px 1px 1px #CCCCCC;
+    width: 433px;
+
+}
+
+/*************************  Consola de administración ***************************/
+
+.Workspace{  
+    position: absolute;
+    overflow: auto;
+    height: 95%;
+    left: 260px;
+    top: 0px;
+    border-left: 2.5px solid #e0e0e0;
+    right: 0px;
+    bottom:0px;
+    padding: 10px;
+}
+
+#consola_administracion{
+    margin-right: 10px;
+    padding-right: 20px;
+}
+
+/*#consola_administracion input{
+    font-family: Verdana,Arial,sans-serif; 
+    font-size: 13px;
+    width: 300px;
+    height: 20px;
+    margin-left: 20px; 
+}*/
+#admin_edit_usuario input{
+    font-family: Verdana,Arial,sans-serif; 
+    font-size: 13px;
+    width: 300px;
+    height: 20px;
+    margin-left: 20px; 
+}
+
+#menu_consola{     
+    position: absolute;
+    /*display: relative;*/
+    width: 250px;
+    bottom:0px;
+    top: 0px;
+    left: 0px;
+    font-family: Verdana,Arial,sans-serif; 
+    overflow: auto;
+
+}
+
+
+#accordion table tr.admin_sobre_celda{
+    background-color: #c4e5f2;
+    cursor: pointer; 
+    
+}
+
+#accordion table tr.admin_celda_seleccionada
+{
+    background-color: #0086e6;
+    color: #fff;
+    cursor: pointer; 
+}
+#accordion table td.admin_celda_seleccionada
+{
+    /*background-color: #0086e6;*/
+    color: #fff;
+    /*cursor: pointer;*/ 
+}
+#admin_ventana_trabajo{  
+    position: absolute;
+    overflow: auto;
+    height: 95%;
+    left: 260px;
+    top: 0px;
+    border-left: 2.5px solid #e0e0e0;
+    right: 0px;
+    bottom:0px;
+    padding: 10px;
+    /*margin: 5px;*/
+    
+    /*width: 400px;*/
+    /*left: 240px;*/
+}
+#admin_ventana_trabajo .titulos_ventanas
+{
+    width: 100%;
+    border-bottom: 1.5px dashed #d8e1eb;
+    height: 20px;
+    font-size: 15px;
+    color: #0088e3;
+    top: 5px;
+    display: block;
+}
+.seleccionado{
+	/*background: #343434 url(img/ayuda_busca.png) no-repeat scroll right -43px;*/
+        border: 1.5px solid #0282de;
+}
+#menu-horizontal .submenu li:hover {
+background-color: #2586d7;
+margin-top:-2px;
+padding-bottom:12px;
+/*text-shadow: 0.1em 0.1em white;*/
+}
+#admin_ventana_trabajo .boton_admin{
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    font-family: Verdana,Arial,sans-serif; 
+    font-size: 15px;
+    width: 150px;
+    height: 40px;
+}
+#admin_ventana_trabajo{
+font-family: Verdana,Arial,sans-serif; 
+/*background-image:url(../img/fondo_consola.jpg);*/ 
+}
+/* Cajas de Texto Administración */
+#admin_ventana_trabajo .form_admin{
+/*    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;*/
+    font-family: Verdana,Arial,sans-serif; 
+    font-size: 13px;
+    width: 300px;
+    height: 20px;
+     margin-left: 20px; 
+}
+
+#admin_ventana_trabajo p{
+     display: block;
+     margin-left: 20px; 
+     margin-bottom: 5px;
+     margin-top: 15px;
+     /*color: white;*/
+}
+
+
+/*
+********Mail Recibo Nómina*******
+*/
+#mail .estilotextarea {
+    
+    background-color: transparent;
+    border: 1px solid #000000;
+    scrollbar-arrow-color: #000066;
+    scrollbar-base-color: #000033;
+    scrollbar-dark-shadow-color: #336699;
+    scrollbar-track-color: #666633;
+    scrollbar-face-color: #cc9933;
+    scrollbar-shadow-color: #DDDDDD;
+    scrollbar-highlight-color: #CCCCCC;
+    position: static;
+    width: 95%;
+    height: 50%;
+    
+}
+
+
+/*Destinatarios mail */
+#mail .destinatarios
+{    
+       /*border:1px solid black;*/
+       background-color:lightblue;
+       white-space:nowrap;
+       position:static;
+       text-overflow:visible;
+       display:inline-block;
+       margin-left: 3px;
+       margin-right: 3px;
+       margin-top: 3px;
+       margin-bottom: 3px;
+}
+
+#mail #mail_email{
+    width: 300px;   
+}
+#mail #mail_asunto
+{
+    width: 300px;
+}
+
+
+/************************* Tablas dentro de acordeones **************************/
+
+.TableInsideAccordion
+{
+    position: relative;
+    width: 100%;
+}
+
+table.TableInsideAccordion tr
+{
+    cursor: pointer;
+    height: 35px;    
+}
+table.TableInsideAccordion td{
+    vertical-align: middle;
+}
+table.TableInsideAccordion td.TdIcon{
+    width: 20px;
+    padding-right: 12px;
+    
+}
+
+table tr.TableInsideAccordionHoverWithoutClass
+{    
+    color: #0086e5;
+    background-color: #d9efff;
+}
+table tr.TableInsideAccordionHoverWithClass
+{    
+    color: white;
+}
+ 
+table tr.TableInsideAccordionFocus
+{
+    background-color: #d9efff;
+    color: #0086e5;
+}
+
+table tr.TableInsideAccordionActive
+{
+    background-color: #0086e5;
+    color:white;
+}
+
+/*
+    *************************************************************************
+    *                               Scroll                                  *
+    *************************************************************************
+*/
+
+
+::-webkit-scrollbar{
+  width: 10px;
+  padding-right: 10px;
+  background: #dbe8ec;
+}
+::-webkit-scrollbar-button{
+  width:8px;
+  height: 5px;
+}
+::-webkit-scrollbar-track{
+  background:#3c454e;
+  border:thin solid #1a1f25;
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb{
+  background: -webkit-linear-gradient(top, #5aafb0, #4ca06d);
+  -webkit-box-shadow:   inset 0 1px 0 rgba(255,255,225,.5),
+                inset 1px 0 0 rgba(255,255,255,.4),
+                inset 0 1px 2px rgba(255,255,255,.3);
+ 
+  border:thin solid #232c34;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: -webkit-linear-gradient(top, #4ca06d, #5aafb0);
+}
+/* Pseudo-clase */
+::-webkit-scrollbar-thumb:window-inactive {
+  background: rgba(77,161,112,.6);
+}
+
+/*---------------------- Estilo de formularios--------------------- */
+
+
+input[type="text"].StandardForm, input[type="password"].StandardForm, input[type="file"].StandardForm
+{
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    font-family: Verdana,Arial,sans-serif; 
+    font-size: 13px;
+    width: 220px;
+    height: 25px;
+    /*border-left: .5px solid #c8d1db;*/
+    border: 2px solid #c8d1db;    
+    top: 5px;
+    display: table-cell;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+select.StandardForm 
+{
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    font-family: Verdana,Arial,sans-serif; 
+    font-size: 13px;
+    width: 300px;
+    height: 25px;
+    /*border-left: .5px solid #c8d1db;*/
+    border: 2px solid #c8d1db;    
+    top: 5px;
+    display: table-cell;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+input[type="text"].RequiredActivo,input[type="file"].RequiredActivo, input[type="password"].RequiredActivo {
+    border:1px solid red;
+    background-color: #fff0f0;    
+}
+
+select.RequiredActivo{
+    border:1px solid red;
+    background-color: #fff0f0;    
+}
+
+
+/*--------------------------------- Loading -----------------------------------*/
+
+div.Loading
+{
+    bottom: 2px;
+    right: 2px;
+    position: absolute;
+}
+
+/*----------------------------------Botones de DataTable----------------------- */
+.DataTableButtons
+{
+    
+}
+
+/*---------------------- Gráficas con detalle de cada volúmen---------------------*/
+
+
+.VolumeGraphicTable{
+
+    display: inline;
+}
+
+.VolumeGraphicTable td
+{
+    padding: 4px;
+    font-family: Verdana,Arial,sans-serif; 
+    font-size: 13px;
+    border-bottom: 1px solid;
+}
+
+
+.DivVolumeGraphic{
+    
+}

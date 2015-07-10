@@ -1,0 +1,627 @@
+
+/*
+*                           Visor de Facturas de Cliente y Proveedor
+*/
+
+.contenedor_preview{
+    position: absolute;
+    width:99%;
+    height: 99%;
+
+   font-size: 14px;
+   
+}
+
+.contenedor_preview div.boton_get_acuse{
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+.division1_preview_emisor_detalle
+{
+    position: relative;
+    width: 98%;
+    min-height: 20px;
+}
+.division2_preview_receptor{
+    position: relative;
+    width: 98%;
+    min-height: 50px;
+}
+.division3_preview_conceptos
+{
+    position: relative;
+    width: 100%;
+    min-height: 200px;
+    border-bottom: 4px solid #488abb;
+}
+
+.division4_preview_totales_conceptos
+{
+    position: relative;
+    width: 100%;
+    min-height: 90px;
+}
+.division4_preview_totales_conceptos table td{
+    border-bottom: 1px solid #000029;
+    text-align: right;
+    margin: 10px; 
+    padding: 3px;
+}
+.division4_preview_totales_conceptos table{
+    margin-top: 3px;
+}
+.division5_preview_detalle_pago{
+    position: relative;
+    width: 100%;
+    min-height: 50px;
+}
+.division5_preview_detalle_pago table td{
+    margin: 30px; 
+    padding: 2px;
+    text-align: right;
+}
+
+.div_preview_impuestos
+{
+    position:relative;
+    width: 100%;
+    min-height: 80px;
+    margin-bottom:20px;
+    border-bottom: 4px solid #488abb;
+}
+
+.div_preview_impuestos_totales
+{
+    position:relative;
+    width: 100%;
+    min-height: 50px;
+}
+
+.division6_preview_sello_digital{
+    position: relative;
+    width: 100%;
+    min-height: 50px;
+}
+.division7_preview_complemento_certificacion{
+    position: relative;
+    width: 100%;
+    min-height: 50px;
+}
+.tabla_preview_emisor td{
+    margin: 10px; padding: 3px;
+    text-align: left;
+}
+ table td.preview_tabla_celda_emisor{
+    font-size: 18px;
+    text-align: left;
+}
+.div_preview_emisor{
+    width: 400px;
+    /*height: 30%;*/   
+    top: 5px;
+    left: 5px;
+    /*border: 1px solid #e1e1e1;*/
+    font-size: 14px;
+    /*margin:10px 10px 10px 0px;*/
+     /*background-color: #ddddff;*/
+}
+div.div_preview_detalle{
+    /*text-align: right;*/
+    position: absolute;
+    width: 300px;
+    right: 5px;
+    /*height: 50%;*/   
+    top: 5px;
+/*    left: 65%;*/
+    /*background-color: #ddddff;*/
+    font-size: 14px;
+}
+.div_preview_detalle table{    
+    border: 2px solid #488abb;
+    width: 100%;
+}
+.div_preview_detalle table td{    
+    text-align: center;
+}
+.div_preview_detalle table td.celda_fecha{    
+    width: 80px;
+}
+
+table td.celda_titulo{    
+    background: #488abb;
+    color: white;
+    text-align: center;
+}
+
+
+
+.div_preview_receptor
+{
+    /*position: absolute;*/
+    /*top: 200px;*/
+    left: 5px;
+    /*width: 98%;*/
+}
+
+.div_preview_expedido{
+
+    /*width: 48%;*/
+    /*height: 30%;*/   
+    /*top: 62%;*/
+    /*left: 50%;*/
+    /*border: 1px solid #e1e1e1;*/
+    font-size: 14px;
+    margin:10px 10px 10px 0px;
+     background-color: #ddddff;
+}
+.div_preview_conceptos{
+    position: relative;
+    /*top: 500px;*/
+    /*border: 1px solid #e1e1e1;*/
+    font-size: 14px;
+    margin:10px 10px 10px 0px;
+     /*background-color: #ddddff;*/
+}
+
+.div_preview_percepciones{
+    position: relative;
+    
+    top: 600px;
+/*    width: 85%;
+    height: 160%;   
+    top: 173%;
+    */left: 10%;
+    /*border: 1px solid #e1e1e1;*/
+    font-size: 14px;
+    margin:10px 10px 10px 0px;
+     /*background-color: #ddddff;*/
+}
+
+.div_preview_deducciones{
+    position: relative;
+    top: 700px;
+/*    width: 85%;
+    height: 140%;   
+    top: 339%;*/
+    /*left: 10%;*/
+    /*border: 1px solid #e1e1e1;*/
+    font-size: 14px;
+    margin:10px 10px 10px 0px;
+     /*background-color: #ddddff;*/
+}
+
+.incapacidades{
+    position: static;
+    /*border: 1px solid #e1e1e1;*/
+    font-size: 14px;
+    margin:10px 10px 10px 0px;
+     /*background-color: #ddddff;*/
+}
+.hrs_extra{
+    position: static;
+    /*border: 1px solid #e1e1e1;*/
+    font-size: 14px;
+    margin:10px 10px 10px 0px;
+     /*background-color: #ddddff;*/
+}
+.listado_xml_pdf{
+    position: absolute;
+/*    width: 100%;
+    height: 90%;   
+    top: 5%;*/
+    font-size: 14px;   
+    text-align: center
+}
+.div_preview_receptor table.tabla_preview_receptor td{
+    margin: 15px; padding: 3px;
+}
+
+
+
+table.tabla_preview_sello_digital{
+    margin-top: 5px;
+    width: 100%;
+    table-layout: fixed;
+    margin: auto;
+}
+table.tabla_preview_sello_digital td.celda_sello_original{
+
+    height: auto;
+    width: 200px;
+    table-layout: auto;
+}
+.textarea_sello_original{
+    width: 99%;
+    height: 100%;
+    border: none;
+    resize: none;
+    min-height: 20px;
+    background-color: white;
+}
+
+table.tabla_complemento_certificacion{
+    margin: 10px; padding: 3px;
+    width: 100%;
+    border-collapse: separate;
+    border-spacing:  5px;
+    
+}
+
+table.tabla_complemento_certificacion td{
+    border-bottom: 3px #FFFFFF solid;
+}
+
+#tabla_preview tr:nth-child(odd) {
+   /*background-color: #DDD;*/
+   background-color:#ddddff;
+   color:#777
+}
+
+#tabla_preview tr:nth-child(even) {
+   /*background-color: #666;*/
+   background-color:#b9c9fe;
+   /*color:#FFF;*/   
+}
+
+
+#tabla_percepciones{
+    width:95%;
+    margin: auto;
+    
+}
+#tabla_percepciones tr:nth-child(odd) {
+   /*background-color: #DDD;*/
+   background-color:#e3e5ff;
+   /*color:#777*/
+}
+
+#tabla_percepciones tr:nth-child(even) {
+   /*background-color: #666;*/
+   background-color:#FFFFFF;
+   /*color:#FFF;*/   
+}
+
+
+
+#tabla_percepciones td{
+    height: 25px;
+    width: 20%;
+    font-size: 14px; 
+    color:#000029;
+    font-family: Verdana,Arial,sans-serif; 
+    padding:.4em .2em;
+    font-style: normal;
+    list-style: none;
+    border-collapse: collapse; margin:0 0 .4em;
+    border: 1px solid #b5b5b5;
+    text-align: center;
+}
+
+
+
+#tabla_percepciones th:first-child{
+    -moz-border-radius: 6px 0 0 0;
+    -webkit-border-radius: 6px 0 0 0;
+    border-radius: 6px 0 0 0;
+
+    text-align: center; 
+    width: 20%;    
+    background-color: #cccccc;
+    height: 25px;
+/*    font-size: 14px;   */
+    color:#262626;
+    font-family: Verdana,Arial,sans-serif; 
+    font-size: 1.1em;
+    padding:.4em .2em;
+    font-style: normal;
+    list-style: none;
+    border-collapse: collapse; margin:0 0 .4em;      
+}
+
+#tabla_percepciones th:last-of-type{
+    -moz-border-radius: 0 6px 0 0;
+    -webkit-border-radius: 0 6px 0 0;
+    border-radius: 0 6px 0 0;
+
+    text-align: center; 
+    width: 20%;    
+    background-color: #cccccc;
+    height: 25px;
+/*    font-size: 14px;   */
+    color:#262626;
+    font-family: Verdana,Arial,sans-serif; 
+    font-size: 1.1em;
+    padding:.4em .2em;
+    font-style: normal;
+    list-style: none;
+    border-collapse: collapse; margin:0 0 .4em;      
+}
+#tabla_percepciones th{
+    text-align: center; 
+    width: 20%;    
+    background-color: #cccccc;
+    height: 25px;
+/*    font-size: 14px;   */
+    color:#262626;
+    font-family: Verdana,Arial,sans-serif; 
+    font-size: 1.1em;
+    padding:.4em .2em;
+    font-style: normal;
+    list-style: none;
+    border-collapse: collapse; margin:0 0 .4em;      
+}
+
+
+.tabla_preview_expedido{
+    left: 50%;
+    width:48%;
+    margin: auto;
+    
+}
+.tabla_preview_expedido tr:nth-child(odd) {
+   /*background-color: #DDD;*/
+   background-color:#e3e5ff;
+   /*color:#777*/
+}
+
+.tabla_preview_expedido tr:nth-child(even) {
+   /*background-color: #666;*/
+   background-color:#FFFFFF;
+   /*color:#FFF;*/   
+}
+
+
+
+.tabla_preview_expedido td{
+    height: 25px;
+    width: 20%;
+    font-size: 14px; 
+    color:#000029;
+    font-family: Verdana,Arial,sans-serif; 
+    padding:.4em .2em;
+    font-style: normal;
+    list-style: none;
+    border-collapse: collapse; margin:0 0 .4em;
+    border: 1px solid #b5b5b5;
+    text-align: center;
+}
+
+.tabla_preview_expedido th{
+    -moz-border-radius: 6px 6px 0 0;
+-webkit-border-radius: 6px 6px 0 0;
+border-radius: 6px 6px 0 0;
+    text-align: center; 
+    width: 20%;    
+    background-color: #cccccc;
+    height: 25px;
+/*    font-size: 14px;   */
+    color:#262626;
+    font-family: Verdana,Arial,sans-serif; 
+    font-size: 1.1em;
+    padding:.4em .2em;
+    font-style: normal;
+    list-style: none;
+    border-collapse: collapse; margin:0 0 .4em;      
+}
+/* Conceptos (Factura Cliente) */
+
+table.tabla_conceptos{
+    width:100%;
+    margin: auto;
+    
+}
+table.tabla_conceptos tr:nth-child(odd) {
+   /*background-color: #DDD;*/
+   background-color:#e3e5ff;
+   /*color:#777*/
+}
+
+table.tabla_conceptos tr:nth-child(even) {
+   /*background-color: #666;*/
+   background-color:#FFFFFF;
+   /*color:#FFF;*/   
+}
+
+
+
+table.tabla_conceptos td{
+    height: 25px;
+    /*width: 20%;*/
+    font-size: 14px; 
+    color:#000029;
+    font-family: Verdana,Arial,sans-serif; 
+    padding:.4em .2em;
+    font-style: normal;
+    list-style: none;
+    border-collapse: collapse; margin:0 0 .4em;
+    border: 1px solid #b5b5b5;
+    text-align: center;
+}
+
+table.tabla_conceptos td.descripcion{
+    height: 25px;
+    /*width: 20%;*/
+    font-size: 14px; 
+    color:#000029;
+    font-family: Verdana,Arial,sans-serif; 
+    padding:.4em .2em;
+    font-style: normal;
+    list-style: none;
+    border-collapse: collapse; margin:0 0 .4em;
+    border: 1px solid #b5b5b5;
+    text-align: left;
+}
+
+
+table.tabla_conceptos th{
+    text-align: center; 
+    /*width: 20%;*/    
+    /*background-color: #cccccc;*/
+    background: #488abb;
+    height: 25px;
+/*    font-size: 14px;   */
+    /*color:#262626;*/
+    color: #FFFFFF;
+    font-family: Verdana,Arial,sans-serif; 
+    font-size: 1.1em;
+    padding:.4em .2em;
+    font-style: normal;
+    list-style: none;
+    border-collapse: collapse; margin:0 0 .4em;      
+}
+
+
+
+/* tablas de horas extra e incapacidades */
+#tabla_hrs_inc{
+    width:95%;
+    margin: auto;
+    
+}
+#tabla_hrs_inc tr:nth-child(odd) {
+   /*background-color: #DDD;*/
+   background-color:#e3e5ff;
+   /*color:#777*/
+}
+
+#tabla_hrs_inc tr:nth-child(even) {
+   /*background-color: #666;*/
+   background-color:#FFFFFF;
+   /*color:#FFF;*/   
+}
+
+
+
+#tabla_hrs_inc td{
+    height: 25px;
+    width: 25%;
+    font-size: 14px; 
+    color:#000029;
+    font-family: Verdana,Arial,sans-serif; 
+    padding:.4em .2em;
+    font-style: normal;
+    list-style: none;
+    border-collapse: collapse; margin:0 0 .4em;
+    border: 1px solid #b5b5b5;
+    text-align: center;
+}
+
+#tabla_hrs_inc th{
+    text-align: center; 
+    width: 25%;    
+    background-color: #cccccc;
+    height: 25px;
+/*    font-size: 14px;   */
+    color:#262626;
+    font-family: Verdana,Arial,sans-serif; 
+    font-size: 1.1em;
+    padding:.4em .2em;
+    font-style: normal;
+    list-style: none;
+    border-collapse: collapse; margin:0 0 .4em;    
+}
+
+#tabla_hrs_inc th:last-of-type{
+    -moz-border-radius: 0 6px 0 0;
+    -webkit-border-radius: 0 6px 0 0;
+    border-radius: 0 6px 0 0;
+    
+    text-align: center; 
+    width: 25%;    
+    background-color: #cccccc;
+    height: 25px;
+/*    font-size: 14px;   */
+    color:#262626;
+    font-family: Verdana,Arial,sans-serif; 
+    font-size: 1.1em;
+    padding:.4em .2em;
+    font-style: normal;
+    list-style: none;
+    border-collapse: collapse; margin:0 0 .4em;    
+}
+#tabla_hrs_inc th:first-child{
+    -moz-border-radius: 6px 0 0 0;
+    -webkit-border-radius: 6px 0 0 0;
+    border-radius: 6px 0 0 0;
+    
+    text-align: center; 
+    width: 25%;    
+    background-color: #cccccc;
+    height: 25px;
+/*    font-size: 14px;   */
+    color:#262626;
+    font-family: Verdana,Arial,sans-serif; 
+    font-size: 1.1em;
+    padding:.4em .2em;
+    font-style: normal;
+    list-style: none;
+    border-collapse: collapse; margin:0 0 .4em;    
+}
+
+/*imagenes de barra de herramientas */
+img.alignleft{
+        left: 10%
+  
+}
+
+
+/************************************************Recibos de Nómina*********************************************** */
+
+.division_detalle_receptor{
+    position: relative;
+    min-height: 50px;
+    width: 99%;
+    margin: auto;
+}
+.division1_detalle_receptor{
+    
+    margin: 10px; padding: 3px;
+      width: 100%;
+    /*height: 30%;*/   
+    top: 5px;
+    left: 5px;
+    /*border: 1px solid #e1e1e1;*/
+    font-size: 14px;
+    /*margin:10px 10px 10px 0px;*/
+     /*background-color: #ddddff;*/
+}
+
+.division_detalle_receptor table{
+    margin: auto;
+    border-collapse: separate;
+    border-spacing:  4px;
+}
+.division_detalle_receptor table td{
+
+    
+}
+
+.division2_detalle_receptor{
+    margin: 10px; padding: 3px;
+      width: 100%;
+    /*height: 30%;*/   
+    top: 5px;
+    left: 5px;
+    /*border: 1px solid #e1e1e1;*/
+    font-size: 14px;
+    /*margin:10px 10px 10px 0px;*/
+     /*background-color: #ddddff;*/
+}
+
+.division4_preview_percepciones_deducciones
+{
+    position: relative;
+    min-height: 50px;
+    width: 99%;
+/*    border: 2px solid #488abb;
+    padding: 10px 10px; 
+    border-radius: 25px;*/
+    
+}
+
+
+ div.division4_preview_percepciones_deducciones table td.celda_descripcion
+{
+    width: 400px;
+}

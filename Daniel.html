@@ -1,0 +1,861 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>    
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title></title>
+    <link href='img/shorticon.png' rel='shortcut icon' type='image/png'>
+    <script type="text/javascript" src="apis/js/jquery-2.0.0.min.js"></script>            
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css"/>
+
+    <link href='img/shorticon.png' rel='shortcut icon' type='image/png'>
+    <script type="text/javascript" src="apis/js/jquery-2.0.0.min.js"></script>            
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
+
+    <!--*****************************Dialogos modales******************************* -->
+    <link rel="stylesheet" href="apis/jquery-ui/jquery-ui.css" >
+    <script type="text/javascript" src="apis/dialog/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="apis/dialog/jquery-ui-1.10.4.custom.js"></script>
+    <script type="text/javascript" src="apis/jquery-dialog-extended/jquery.dialogextend.js"></script>
+    <!--*************** Arbol *****************-->
+    <link href="apis/arbol/skin-vista/ui.dynatree.css" rel="stylesheet" type="text/css">
+    <script src="apis/arbol/jquery.dynatree.js" type="text/javascript"></script>
+    
+    <!--*************** Tabla con Paginado y búsqueda *****************-->
+    <link rel="stylesheet" type="text/css" media="screen" href="apis/DataTables/media/css/jquery.dataTables.css"> 
+    <link rel="stylesheet" type="text/css" media="screen" href="apis/DataTables/extensions/TableTools/css/dataTables.tableTools.css">
+    <script type="text/javascript" charset="utf-8" src="apis/jquery.jeditable/jquery.jeditable.js"></script>
+    <script type="text/javascript" charset="utf-8" src="apis/DataTables/media/js/jquery.dataTables.js"></script>
+    <script type="text/javascript" charset="utf-8" src="apis/DataTables/extensions/TableTools/js/dataTables.tableTools.js"></script>
+    
+    <!--*********************************Mail************************************** -->
+    <link rel="stylesheet" type="text/css" media="screen" href="css/estilos.css"/>
+    <link href="css/alta_usuarios.css" rel="stylesheet" type="text/css">
+    <!--*****************imprimir **************-->
+    <script type="text/javascript" charset="utf-8" src="apis/js/jquery.PrintArea.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/imprimir.css" media="print" />
+
+    <link href="apis/Gritter-master/css/jquery.gritter.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" charset="utf-8" src="apis/Gritter-master/js/jquery.gritter.js"></script>
+    <script type="text/javascript" charset="utf-8" src="apis/Gritter-master/js/jquery.gritter.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/preview_recibo.css"/>
+
+    <script type="text/javascript" src="js/alta_sistema.js"></script>
+    <script type="text/javascript" src="js/StartSystem.js"></script>
+    <script type="text/javascript" src="js/FieldsValidator.js"></script>
+    <script type="text/javascript" src="js/Login.js"></script>
+    <script type="text/javascript" src="js/Administrator.js"></script>
+    <script type="text/javascript" src="js/Historical.js"></script>
+    <script type="text/javascript" src="js/carga_masiva.js"></script>
+    <script type="text/javascript" src="js/Searcher.js"></script>
+    <script type="text/javascript" src="js/UsersManager.js"></script>
+    <script type="text/javascript" src="js/Users.js"></script>
+    <script type="text/javascript" src="js/Tree.js"></script>
+    <script type="text/javascript" src="js/Preview.js"></script>
+    <script type="text/javascript" src="js/Log.js"></script>
+    <script type="text/javascript" src="js/SystemStatus.js"></script>
+    <!--<script type="text/javascript" src="res/js/listado_empleado_detalle.js"></script>-->
+    <script type="text/javascript" src="js/barra_herramientas.js"></script>
+    <script type="text/javascript" src="js/EmailEngine.js"></script>
+    <script type="text/javascript" src="js/ayuda.js"></script>
+    <script type="text/javascript" src="js/CFDI.js"></script>
+    <!--<script type="text/javascript" src="js/SystemManagement.js"></script>-->
+    <script type="text/javascript" src="js/Receipt.js"></script>
+    <script type="text/javascript" src="js/Pdf.js"></script>
+    <script type="text/javascript" src="js/EnvironmentData.js"></script>
+    <script type="text/javascript" src="js/Instances.js"></script>
+    <script type="text/javascript" src="js/Global.js"></script>
+    <script type="text/javascript" src="js/Mensajes.js"></script>
+    <script type="text/javascript" src="js/Content.js"></script>
+</head>
+<body>
+
+<!-- FAIL -->
+<div id="fail">
+	<div class="fail-browser-logo">
+    	<img src="img/apple-logo-login.png" alt="Mac OS X" />
+    </div>
+    <div class="fail-browser">
+        <p><strong>Lo sentimos, nuestro sistema requiere de un navegador que soporte animaciones CSS3!</strong></p> 
+        <p>Le recomendamos descargar <a href="http://www.google.com/intl/es-419/chrome/browser/" target="_blank" title="Google Chrome">Google Chrome</a> </p>
+    </div>
+</div>
+
+<!-- BOOT -->
+
+<div id="pageLoading">
+	<div class="loading">
+		<div class="apple-logo"></div>
+        <div class="spinner"></div>
+	</div>
+</div>
+<!-- LOGIN -->
+<div id="pageLogin">
+    <div id="salida_login"></div>
+	<header id="headlogin">
+            <nav id="menu-dx-login">
+                <ul>
+                    <li class="wireless"></li>
+                    <li class="time">
+                        <ul>
+                            <li class="hours"> </li>
+                            <li class="point">:</li>
+                            <li class="min"> </li>
+                        </ul>
+                    </li>
+		</ul>
+            </nav>
+        </header>
+    <div id="init_login">
+        <div id="apple_logo_login" class="new-apple-logo"></div>
+        <div id="apple_logo_login2" class="new-apple-logo"></div>
+        <div class="user-avatar" id="user-avatar">
+            <div id="avatar">
+                <a href="#hide" class="hide" id="hide"></a>
+                <a href="#show" class="show" id="show"></a>
+                <div id="cover"></div>
+                <div class="ava-css">
+                    <img src="img/Lion.gif" />
+                </div>
+                <div class="logName">
+                </div>
+                <div id="switch">
+                    <div class="validate">
+                        <form action="#page">
+                            <input type="text" id="form_user" placeholder="Usuario" onkeyup="if (event.keyCode == 13) login();">                   
+                            <input type="password" id="form_password" onkeyup="if (event.keyCode == 13) login();" placeholder="Password" />
+                            <input type="button" class="submit" id="boton_login"  />
+                            
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>        
+    </div>      
+        <!--<div id="registro_admin"></div>-->
+</div>
+    
+<div>
+    <input type="text" id="id_usr" style="display: none">
+</div>
+
+<!-- DESKTOP -->
+<div id="page"></div>
+<header id="head">
+	<nav id="menu">
+    	<ul>
+        <li class="apple">
+        	<a href="#all">Apple</a>
+            <ul class="sublist">
+                <li id="li_acerca_csdocs" onclick="abrirVentana('http://www.cs-docs.com')"><a href="#about-this-mac" data-rel="show">Acerca de CSDocs CFDI</a></li>
+           <!-- <li>Software Updates...</li> -->            
+    <li class="divider"></li>              
+    <li class = "AdministratorConsole"><a href="#Administrator">Consola de Administración</a></li>
+             <li class="divider"></li>      
+             <li onclick="carga_nomina()()"><a href="#carga_recibo_nomina_xml" data-rel="show">Carga Recibo de Nómina XML</a></li>
+             <li onclick="carga_factura_cliente()"><a href="#" data-rel="show">Cargar XML Cliente</a></li>
+             <li onclick="carga_factura_proveedor()"><a href="#carga_factura_proveedor" data-rel="show">Cargar XML Proveedor</a></li>            
+            <li class="divider"></li>
+            <li>Salir</li>
+            </ul>
+        </li>
+        <li class="here">
+            <a href="#all">Finder</a>
+            <ul class="sublist">
+                <li onclick="content_nomina()"><a href="#window_content_nomina" data-rel="show">Content Nómina</a></li>
+                <li onclick="content_clientes()"><a href="#window_content_cliente" data-rel="show">Content Facturas Cliente</a></li>
+                <li onclick="content_proveedores()"><a href="#window_content_proveedor" data-rel="show">Content Facturas Proveedor</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Recibo Honorarios</a></li>
+                <li><a href="#">Recibo Pago</a></li>
+                <li><a href="#">Recibo Arrendamiento</a></li>
+                <li><a href="#">Recibo Donativos</a></li>
+                <li><a href="#">Nota Crédito</a></li>
+                <li><a href="#">Nota Devolución</a></li>
+                <li><a href="#">Comprobante Retención</a></li>
+                <li><a href="#">Carta Porte</a></li>
+                <li><a href="#">Balanza Comprobación</a></li>
+                <li><a href="#">Poliza de Diário</a></li>
+                <li><a href="#">Xml Bancario</a></li>                
+            </ul>
+        </li>
+           	   
+        <li><a href="#all">Ayuda</a>
+            <ul class="sublist">
+                <li onclick="ventana_ayuda()"><a href="#AyudaSistema" data-rel="show">Ayuda del Sistema</a></li>
+            </ul>
+        </li>
+        </ul>
+	</nav>
+    <nav id="menu-dx">
+        <ul id="barra_info_sup_der">
+            <li><img src="img/icono_correo.png" title="Motor de Correos" style="cursor: pointer" id="icono_motor_correo"></li>
+            <li><img src="img/download-icon.png" title="Descargas" style="cursor: pointer" id="seleccion_icon"></li>
+            <li class="wireless">
+                <a href="#all">Wireless</a>
+            </li>
+            <li class="time">
+            <ul>
+                <li id="DateAbbr"> </li>
+                <li class="hour"> </li>
+                <li class="point">:</li>
+                <li class="mins"> </li>
+            </ul>
+            </li>
+            <li class="username" id="barra_sup_username">
+                    <!--<a href="#all">Daniel Luna</a>-->
+            </li>
+        </ul>
+    </nav>
+</header>
+    
+<div id="ventana_resultado" style="display: none"></div>            
+    
+<!--
+                        **************************
+                        *       Ventana de Ayuda    *
+                        **************************
+-->
+<div id="ventana_ayuda" style="display: none">
+    <div id="div_caja_busqueda"></div>        
+    <div id="menu_ayuda">   
+        <input type="text" id="ayuda_caja_busqueda" placeholder="Buscar...">
+        <div id="menu_manual_usuario">
+            <div >            
+                <h3><a href="#">Manual de Usuario</a></h3>
+                <div>
+                    <table id="table_menu_ayuda">
+                        <tr id="subtema_ayuda_alta_usuario" class="ayuda_subtitulos">
+                            <td></td>
+                            <td>Alta de un usuario</td>
+                        </tr>
+                        <tr id="subtema_ayuda_baja_usuario" class="ayuda_subtitulos">
+                            <td></td>
+                            <td>Baja de un usuario</td>
+                        </tr>
+                        <tr id="subtema_busquedas" class="ayuda_subtitulos">
+                            <td></td>
+                            <td>Búsquedas</td>
+                        </tr>
+                        <tr id="subtema_ayuda_modificar_usuario" class="ayuda_subtitulos">
+                            <td></td>
+                            <td>Modificar datos de un usuario</td>
+                        </tr>
+                        <tr id="subtema_ingresar_comprobante" class="ayuda_subtitulos">
+                            <td></td>
+                            <td>Ingresar un comprobante</td>
+                        </tr>
+                        <tr id="subtema_actualizar_comprobante" class="ayuda_subtitulos">
+                            <td></td>
+                            <td>Actualizar un Comprobante</td>
+                        </tr>
+                        <tr id="subtema_ingresar_pdf" class="ayuda_subtitulos">
+                            <td></td>
+                            <td>Ingresar un PDF</td>
+                        </tr>
+
+                        <tr id="subtema_enviar_correo" class="ayuda_subtitulos">
+                            <td></td>
+                            <td>Enviar comprobantes por correo</td>
+                        </tr>
+                        <tr id="subtema_imprimir_comprobante" class="ayuda_subtitulos">
+                            <td></td>
+                            <td>Imprimir un Comprobante</td>
+                        </tr>
+                        <tr id="subtema_visualizar_pdf" class="ayuda_subtitulos">
+                            <td></td>
+                            <td>Visualizar un PDF</td>
+                        </tr>
+                    </table>                                                     
+                </div>                                
+            </div>
+        </div>                                      
+    </div>
+        
+    <div id="ayuda_contenido"></div>
+        
+</div>
+
+
+<!-- 
+                ****************************
+                * Consola de Administración*
+                ****************************
+
+<div id="consola_administracion" style="display: none">
+    <div id="admin_ventana_trabajo">        
+            <div id="salida_admin_ventana_trabajo"></div>                    
+    </div>   
+     <div id="menu_consola">
+        <div id="accordion">
+            <div>  
+            <h3><a href="#">Usuarios</a></h3> 
+                <div>
+                    <table class = "TableInsideAccordion">
+                        <tr class = "UsersLink">
+                            <td class = "TdIcon"><img src="img/users.png"></td>
+                            <td >Usuarios</td>
+                        </tr>
+                    </table>
+                </div>        
+             </div>
+
+            <div>  
+                <h3><a href="#">Reportes</a></h3>
+                <div>
+                    <table class = "TableInsideAccordion">
+                        <tr class = "LogMail">
+                            <td class = "TdIcon"><img src="img/register.png"></td>
+                            <td  title="Registro del día">Registros</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div>  
+              <h3><a href="#">Sistema</a></h3>
+                <div>
+                    <table class = "TableInsideAccordion">
+                        <tr class = "MailLink">
+                            <td class = "TdIcon"><img src="img/mail-icon.png"></td>
+                            <td  title="Mail">Mail</td>
+                        </tr>
+                    </table>
+                </div>        
+            </div>       
+        </div>
+    </div>                                      
+</div>
+<!--
+        *********************************************************************************************
+        *                                                                                           *
+        *                                   Motor de Correos                                        *
+        *                                                                                           *
+        *********************************************************************************************
+        *
+-->
+
+<div id="div_motor_correos" style="display:none">
+    <ul>
+        <li id="li_div_listado_motor_validos"><a href="#div_listado_motor_validos">Descarga de Facturas Válidas</a></li>
+        <li id="li_div_listado_motor_invalidos"><a href="#div_listado_motor_invalidos">Descarga de Facturas Inválidas</a></li>
+        <li id="li_div_listado_motor_repetidos"><a href="#div_listado_motor_repetidos">Descarga de Facturas Repetidas</a></li>
+    </ul>    
+    <div id="div_listado_motor_validos"></div>
+    <div id="div_listado_motor_invalidos"></div>
+    <div id="div_listado_motor_repetidos"></div>
+</div>
+
+<div id="div_resultado_descarga_correo"></div>
+
+
+
+<!--
+        *******************************
+        *   Carga Recibos de Nómina   *
+        *******************************
+-->
+<div id="carga_recibo_nomina_xml" class="contenedor_carga" style="display: none">
+    Seleccione los comprobantes de Nómina que desee ingresar al sistema
+    <div class="icono_carga"><img src="img/CargarNominaXml.png" alt="Finder" id="img_carga_nomina"/></div> 
+    <div id="subir_nomina" class="browser_carga">
+        <input id="browser_carga_nomina" type="file" name="archivos[]" multiple="multiple" onchange="carga_masiva_('nomina');" accept="text/xml"/>                       
+    </div>
+    <div class="contenedor_salida">
+        Resultado:<br>
+        <div id="cargados_nomina"></div>
+    </div>
+</div>
+
+<!--
+        *******************************
+        *   Carga Factura Cliente     *
+        *******************************
+-->
+<div id="carga_factura_cliente" class="contenedor_carga" style="display: none">
+    Seleccione las Facturas de Cliente que desee ingresar al sistema.       
+    <div class="icono_carga"><img src="img/CargarClienteXml.png" alt="Finder" id="img_carga_cliente"/></div>          
+    <div id="subir_cliente" class="browser_carga">
+        <input id="browser_carga_cliente" type="file" name="archivos[]" multiple="multiple" onchange="carga_masiva_('cliente');" accept="text/xml"/>                       
+    </div>
+    <div class="contenedor_salida">
+        Resultado:<br>
+        <div id="cargados_cliente">  </div>
+    </div>
+</div>
+
+
+<!--
+        *******************************
+        *   Carga Factura Proveedor   *
+        *******************************
+-->
+<div id="carga_factura_proveedor" class="contenedor_carga" style="display: none">
+    Seleccione las Facturas de Proveedor que desee ingresar al sistema.
+    <div class="icono_carga"><img src="img/CargarProveedorXml.png" alt="Finder" id="img_carga_proveedor"/></div>
+    <div id="subir_proveedor" class="browser_carga">
+        <input id="browser_carga_proveedor" type="file" name="archivos[]" multiple="multiple" onchange="carga_masiva_('proveedor');" accept="text/xml"/>                       
+    </div>
+    <div class="contenedor_salida" >
+        Resultado:<br>
+        <div id="cargados_proveedor">   
+        </div> 
+    </div>
+                
+</div>
+
+
+         
+
+<div id="status_sistema">
+  
+</div>
+<!--  
+                        ********************************************************
+                        *                    Acuse de Recíbo                   *
+                        ********************************************************
+-->
+
+<div id="contenedor_acuse">        
+</div>
+
+<!--
+                        **********************************************************
+                        *    Div que almacena el lista de descarga de archivos   *
+                        **********************************************************
+-->
+
+<div id="contenedor_seleccion" style="display: none">
+    <div class="titulos_ventanas">Listado de selección</div>        
+</div>
+                
+                    <!--**********************************************************
+                        *                     Visor de XML                       *
+                        **********************************************************-->
+<div id="visor_xml" style="display: none">
+    <div class="titulos_ventanas">Visualización de XML</div>
+</div>
+                    <!--**********************************************************
+                        *              Vista Previa CFDI en Histórico            *
+                        **********************************************************-->
+<div id="div_cfdi_copia_historico" style="display: none">
+
+    <div class="boton_get_acuse" id="PreviewHistorical_boton_get_acuse"></div>
+    <div class="division1_preview_emisor_detalle">
+        <div id="PreviewHistorical_emisor" class="div_preview_emisor"></div>              
+        <div id="PreviewHistorical_detalle" class="div_preview_detalle"></div>
+    </div>
+         <hr>
+         <div class="division2_preview_receptor">
+            <div id="PreviewHistorical_receptor" class="div_preview_receptor"></div>
+         </div>
+         <hr>
+        <div class="division3_preview_conceptos">
+            <div id="PreviewHistorical_conceptos" class="div_preview_conceptos"> </div>
+        </div>
+         <div id="PreviewHistorical_totales_conceptos" class="division4_preview_totales_conceptos"></div>
+         <div id="PreviewHistorical_impuestos" class="div_preview_impuestos"></div> 
+         <div id="PreviewHistorical_impuestos_totales" class="div_preview_impuestos_totales"></div> 
+         <div id="PreviewHistorical_detalle_pago" class="division5_preview_detalle_pago"></div>
+         <div id="PreviewHistorical_sello_digital" class="division6_preview_sello_digital"></div>
+         <div id="PreviewHistorical_tfd" class="division7_preview_complemento_certificacion"></div>
+         <div id="PreviewHistorical_expedido"></div>           
+
+</div>
+
+                    <!--**********************************************************
+                        *              Vista Previa PDF en Histórico            *
+                        **********************************************************-->
+<div id="vista_previa_pdf_historico" style="display: none"></div>
+                    
+<!--
+                        **********************************
+                        *Repositorio de Recibos de Nómina*
+                        **********************************
+-->
+<div id="window_content_nomina" style="display: none">      
+    <div class="contenedor_administracion">     
+        <div class="subtitulo_content3">Opciones de Búsqueda</div>
+        <div class="contenedor_busqueda">     
+            <table>
+                <theat>
+                    <tr>
+                        <th></th><th></th>
+                    </tr>
+                </theat>
+                <tr>
+                    <td>Empresa: </td>
+                    <td><select id="PayRollEnterprise" class="select_lista_empresa">
+                        <OPTION VALUE="0">Seleccione una empresa</OPTION>                                             
+                        </select>
+                    </td>
+                
+                </tr>
+                <tr>
+                    <td>Buscar:</td>
+                    <td><input type="text" onkeyup="if (event.keyCode == 13) llenar_arbol();" id="PayrollSearchForm" content = "PayRoll" class="form_busqueda" name="buscar" placeholder="¿Qué desea Búscar?" ></td>
+                </tr>
+                <tr>
+                    <td>Desde: </td>
+                    <td><input type="text" id="PayrolltartDateForm" onchange="nomina_clean_contents();" class="fecha_busqueda" title="Pulse para ingresar una fecha" readonly><img src="img/cancel_icon.png" title="limpiar campo" class="x_fecha_busqueda" id="nomina_limpiar_fecha1"></td>
+                </tr>
+                <tr>
+                    <td>Hasta: </td>
+                    <td><input type="text" id="PayrollEndDateForm"  onchange="nomina_clean_contents();" class="fecha_busqueda" title="Pulse para ingresar una fecha" readonly><img src="img/cancel_icon.png" title="limpiar campo" class="x_fecha_busqueda" id="nomina_limpiar_fecha2"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><div class="boton_busqueda"><input type="button" value="Búsqueda" content ="PayRoll"  class = "SearchButton"></div></td>
+                </tr>
+            </table>                                                                                                                                 
+        </div>
+        <!--    Arbol    -->                    
+        <div class="contenedor_arbol">
+            <p>--</p>
+            <div id="PayRolltree"></div>                          
+        </div>       
+        <div id="visor_pdf" title="Visor PDF"></div>
+        <div id="mail" title="Enviar Mail"></div>
+        
+        <div class="contenedor_listado">                        
+            <div  id="tabla_detalle"  class="listado_xml_pdf"></div>
+            <div id="salida"></div>
+            
+            <div id="upload_xml"> 
+                <div id="salida_pdf">                    
+                </div>
+            </div>
+            <div id="upload_pdf">
+                <div id="salida_upload_pdf"></div>
+            </div>
+            <div id="dialog_information"></div>
+            <div id="id_empleado"></div>            
+        </div>
+        <div class="subtitulo_content1">Lista de Recibos</div>
+        <div class="barra_botones">  
+            <input type="button" title="Carga XML" content = "PayRoll" class = "ButtonUpdateCfdi" id="carga_xml" onclick="" value="Actualiza XML/PDF">
+            <input type="button" title="Enviar por mail"  onclick="mail('PayRoll');" value="Enviar por Correo">
+            <input type="button" title="Imprimir" id="btn_imprimir" value="Imprimir">  
+        </div>
+        
+        
+        <!--<div class="subtitulo_content2">Vista Previa XML</div>-->
+        <div class="print">
+
+        </div>
+    </div>
+</div>
+<div id="Documents">
+    <div id="nomina_contenedor_documentos" class="contenedor_preview" style="display: none">
+        <ul>
+            <li><a href="#preview">Vista Previa</a></li>
+            <li><a href="#nomina_historico_xml">Historial</a></li>
+        </ul>
+        <div id="preview">   
+            <div class="boton_get_acuse" id="nomina_div_boton_get_acuse"></div>
+                <div class="division1_preview_emisor_detalle">
+                    <div id="nomina_div_preview_emisor" class="div_preview_emisor"></div>              
+                    <div id="nomina_div_preview_detalle" class="div_preview_detalle"></div>
+                </div>
+                 <hr>
+                 <div class="division2_preview_receptor">
+                    <div id="nomina_div_preview_receptor" class="div_preview_receptor"></div>
+                 </div>
+                 <hr>
+                 <div class="division_detalle_receptor">
+                     <div id="nomina_div_preview_detalle_receptor" class="division1_detalle_receptor"></div>
+                 </div>
+
+                 <div id="nomina_div_preview_percepciones_deducciones" class="division4_preview_percepciones_deducciones"></div>
+                 <div id="nomina_div_preview_totales_conceptos" class="division4_preview_totales_conceptos"></div>
+                 <div id="nomina_div_preview_detalle_pago" class="division5_preview_detalle_pago"></div>         
+                 <div id="nomina_div_preview_sello_digital" class="division6_preview_sello_digital"></div>
+                 <div id="nomina_div_preview_complemento_certificacion" class="division7_preview_complemento_certificacion"></div>
+                 <!--
+                 <div id="cliente_expedido" ></div>           
+                <div id="cliente_impuestos" class="div_preview_deducciones"></div> -->
+        </div>
+        <div id="nomina_historico_xml"></div>
+    </div>
+</div>
+<!--
+                        ***********************************
+                        *Repositório de Facturas Cliente  *
+                        ***********************************
+-->
+<div id="window_content_cliente"style="display: none">
+
+    <div class="contenedor_administracion">    
+        <div class="subtitulo_content3">Opciones de Búsqueda</div>
+        <div class="contenedor_busqueda">                                                                                                                                                 
+            <table>
+                <theat>
+                    <tr><th></th><th></th></tr>
+                </theat>
+                <tr>
+                    <td>Empresa:</td>
+                    <td>
+                        <select id="ClientEnterprise" class="select_lista_empresa">
+                            <OPTION VALUE="0">Seleccione una empresa</OPTION>                                             
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Buscar: </td>
+                    <td><input type="text" class="form_busqueda" id="ClientSearchForm" content = "Client" onkeyup="if (event.keyCode == 13){}" name="buscar" placeholder="Buscar un Folio, monto, nombre, etc..." ></td>
+                </tr>
+                <tr>
+                    <td>Desde: </td>
+                    <td><input type="text" id="ClientStartDateForm" onchange="cliente_clean_contents();" class="fecha_busqueda" title="Pulse para ingresar una fecha" readonly><img src="img/cancel_icon.png" title="limpiar campo" class="x_fecha_busqueda" id="cliente_limpiar_fecha1"></td>
+                </tr>
+                <tr>
+                    <td>Hasta: </td>
+                    <td><input type="text" id="ClientEndDateForm"  onchange="cliente_clean_contents();" class="fecha_busqueda" title="Pulse para ingresar una fecha" readonly><img src="img/cancel_icon.png" title="limpiar campo" class="x_fecha_busqueda" id="cliente_limpiar_fecha2"></td>
+                </tr>
+                <tr>                    
+                    <td colspan="2"><div class="boton_busqueda"><input type="button" value="Búsqueda" content ="Client" id = "SearchClientButton" class = "SearchButton"></div></td>
+                </tr>
+            </table>
+        </div>
+        <div class="subtitulo_content1">Listado de Facturas</div>
+        <div class="barra_botones">
+            <input type="button" title="Carga XML" content = "Client" class = "ButtonUpdateCfdi" id="cliente_carga_xml" value="Actualizar XML/PDF">
+            <input type="button" title="Enviar por mail" value="Enviar po Correo" onclick="mail('Client')">
+            <input type="button" title="Imprimir" value="Imprimir" id="cliente_btn_imprimir">
+        </div>
+        
+                            
+        <div class="contenedor_arbol">
+            <p>--</p>
+            <div id="ClientTree"></div>                          
+        </div>       
+        
+        <div class="contenedor_listado">                        
+            <div  id="cliente_tabla_detalle"  class="listado_xml_pdf"></div>
+            <div id="cliente_salida"></div>
+            
+            <div id="cliente_upload_xml" title="Actualizar XML/PDF"> 
+                <div id="cliente_salida_pdf">                    
+                </div>
+            </div>
+            <div id="cliente_upload_pdf">
+                <div id="cliente_salida_upload_pdf"></div>
+            </div>
+            <div id="cliente_dialog_information"></div>
+            <div id="cliente_id"></div>            
+        </div>
+        
+        <div id="cliente_visor_pdf" title="Visor PDF"></div>
+        <div id="cliente_mail" title="Enviar Mail"></div>
+     
+        <!--<div class="subtitulo_content2">Vista Previa XML</div>-->                                    
+            <div class="print">
+                
+            </div>
+    </div>
+</div>
+<div id ="clienteDocuments" style="display: none">
+    <div id="cliente_contenedor_documentos" class="contenedor_preview">
+        <ul>
+            <li><a href="#cliente_preview">Vista Previa</a></li>
+            <li><a href="#cliente_historico_xml">Historial</a></li>
+        </ul>
+        <div id="cliente_preview">
+            <div class="boton_get_acuse" id="cliente_div_boton_get_acuse"></div>
+                <div class="division1_preview_emisor_detalle">
+                    <div id="cliente_div_preview_emisor" class="div_preview_emisor"></div>              
+                    <div id="cliente_div_preview_detalle" class="div_preview_detalle"></div>
+                </div>
+                 <hr>
+                 <div class="division2_preview_receptor">
+                    <div id="cliente_div_preview_receptor" class="div_preview_receptor"></div>
+                 </div>
+                 <hr>
+                <div class="division3_preview_conceptos">
+                    <div id="cliente_div_preview_conceptos" class="div_preview_conceptos"> </div>
+                </div>
+                 <div id="cliente_div_preview_totales_conceptos" class="division4_preview_totales_conceptos"></div>
+                 <div id="cliente_impuestos" class="div_preview_impuestos"></div> 
+                 <div id="cliente_impuestos_totales" class="div_preview_impuestos_totales"></div> 
+                 <div id="cliente_div_preview_detalle_pago" class="division5_preview_detalle_pago"></div>
+                 <div id="cliente_div_preview_sello_digital" class="division6_preview_sello_digital"></div>
+                 <div id="cliente_div_preview_tfd" class="division7_preview_complemento_certificacion"></div>
+                 <div id="cliente_expedido" ></div>           
+                <div id="cliente_impuestos" class="div_preview_deducciones"></div> 
+        </div>   
+        <div id="cliente_historico_xml"></div>
+    </div>    
+</div>
+  
+
+
+<!--                    ***********************************
+                        *Repositório de Facturas Proveedor  *
+                        ***********************************
+-->
+<div id="window_content_proveedor" style="display: none">
+    
+    <div class="contenedor_administracion">     
+        <div class="subtitulo_content3">Opciones de Búsqueda</div>
+        <div class="contenedor_busqueda">                               
+            <table>
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tr>
+                    <td><p>Empresa: </p></td>
+                    <td><select id="ProviderEnterprise" class="select_lista_empresa">
+                        <OPTION VALUE="0">Seleccione una empresa</OPTION>                                             
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><p>Buscar: </p></td>
+                    <td><input type="text" onkeyup="if (event.keyCode == 13){}" class="form_busqueda" content = "Provider" name="buscar" placeholder="¿Qué desea Búscar?" id="ProviderSearchForm"></td>
+                </tr>
+                <tr>
+                    <td>Desde:</td>
+                    <td><input type="text" id="ProviderStartDateForm" onchange="proveedor_clean_contents();" class="fecha_busqueda" title="Pulse para ingresar una fecha" readonly><img src="img/cancel_icon.png" title="limpiar campo" class="x_fecha_busqueda" id="proveedor_limpiar_fecha1"></p></td>
+                </tr>
+                <tr>
+                    <td><p>Hasta:</p></td>
+                    <td><p><input type="text" id="ProviderEndDateForm" onchange="proveedor_clean_contents();" class="fecha_busqueda" title="Pulse para ingresar una fecha" readonly><img src="img/cancel_icon.png" title="limpiar campo" class="x_fecha_busqueda" id="proveedor_limpiar_fecha2"></p></td>
+                </tr>
+                <tr>              
+                    <td colspan="2"><div class="boton_busqueda"><input id = "SearchProviderButton" content="Provider" type="button" value="Búsqueda" onclick="" style="cursor: pointer" class="SearchButton"></div></td>
+                </tr>
+            </table>                                         
+        </div>
+                            
+        <div class="contenedor_arbol">
+            <p>--</p>
+            <div id="ProviderTree"></div> 
+        </div>       
+        <div class="subtitulo_content1">Listado de Facturas</div>
+        <div class="contenedor_listado">                        
+            <div  id="proveedor_tabla_detalle"  class="listado_xml_pdf"></div>
+            <div id="proveedor_salida"></div>
+            
+            <div id="proveedor_upload_xml"> 
+                <!--<div id="proveedor_salida_pdf">                    
+                </div>-->
+            </div>
+            <div id="proveedor_upload_pdf">
+                <div id="proveedor_salida_upload_pdf"></div>
+            </div>
+            <div id="proveedor_dialog_information"></div>
+            <div id="proveedor_id"></div>            
+        </div>
+
+        <div class="barra_botones">
+            <input type="button" content = "Provider" class = "ButtonUpdateCfdi" value="Actualiza XML/PDF">
+            <input type="button" title="Enviar por mail" onclick="mail('Provider');" value="Enviar por Correo">
+            <input type="button" title="Imprimir" value="Imprimir" id="proveedor_btn_imprimir">
+        </div>
+        
+        <!--<div id="proveedor_historico_xml" style="display: none" class="div_historial"></div>-->
+        <div id="proveedor_visor_pdf" title="Visor PDF"></div>
+        <div id="proveedor_mail" title="Enviar Mail"></div>
+        <!--<div class="subtitulo_content2">Vista Previa XML</div>-->
+
+        <div class="print"> </div>
+    </div>
+</div>
+<div id ="proveedorDocuments" style="display: none">
+    <div id="proveedor_contenedor_documentos" class="contenedor_preview">
+        <ul>
+            <li><a href="#proveedor_preview">Vista Previa</a></li>
+            <li><a href="#proveedor_historico_xml">Historial</a></li>
+        </ul>
+            <div id="proveedor_preview">
+                <div class="boton_get_acuse" id="proveedor_div_boton_get_acuse"></div>
+                <div class="division1_preview_emisor_detalle">
+                    <div id="proveedor_div_preview_emisor" class="div_preview_emisor"></div>              
+                    <div id="proveedor_div_preview_detalle" class="div_preview_detalle"></div>
+                </div>
+                 <hr>
+                 <div class="division2_preview_receptor">
+                    <div id="proveedor_div_preview_receptor" class="div_preview_receptor"></div>
+                 </div>
+                 <hr>
+                <div class="division3_preview_conceptos">
+                    <div id="proveedor_div_preview_conceptos" class="div_preview_conceptos"> </div>
+                </div>
+                 <div id="proveedor_div_preview_totales_conceptos" class="division4_preview_totales_conceptos"></div>
+                 <div id="proveedor_impuestos" class="div_preview_impuestos"></div> 
+                 <div id="proveedor_impuestos_totales" class="div_preview_impuestos_totales"></div> 
+                 <div id="proveedor_div_preview_detalle_pago" class="division5_preview_detalle_pago"></div>                 
+                 <div id="proveedor_div_preview_sello_digital" class="division6_preview_sello_digital"></div>
+                 <div id="proveedor_div_preview_tfd" class="division7_preview_complemento_certificacion"></div>
+                 <div id="proveedor_expedido" ></div>           
+                
+            </div>
+    <div id="proveedor_historico_xml"></div>
+
+    </div>    
+</div>
+
+
+<!-- DOCK -->
+
+
+<div class="dock" id="dock_">
+	<ul>
+        <li id="Help_info_help">
+            <a href="#" onclick="abrirVentana('http://www.cs-docs.com')">
+            <em><span>Información</span></em>
+            <img src="img/CSDocsInfoHelp.png" alt="Preview" width="200" height="200" />
+        </a>
+        </li>    
+        <li id="CargarNominaXml" onclick="carga_nomina()">
+        	<a href="#carga_recibo_nomina_xml" data-rel="show">
+            	<em><span>Cargar Recibo de Nómina </span></em>
+                <img src="img/CargarNominaXml.png" alt="Finder" width="200" height="200"/>
+            </a>
+        </li>
+        <li id="CargarClienteXml" onclick="carga_factura_cliente()">
+        	<a href="#carga_factura_cliente" data-rel="show">
+            	<em><span>Cargar Factura Cliente XML  </span></em>
+                <img src="img/CargarClienteXml.png" alt="Launchpad" width="200" height="200"/>
+            </a>
+        </li>
+        <li id="CargarProveedorXml" onclick="carga_factura_proveedor()">
+        	<a href="#carga_factura_proveedor" data-rel="show">
+            	<em><span>Cargar Factura Proveedor XMl</span></em>
+                <img src="img/CargarProveedorXml.png" alt="Mission Control" width="200" height="200"/>
+            </a>
+        </li>               
+        <li id="ContendCliente" onclick="content_clientes()">
+        	<a href="#" data-rel="show">
+            	<em><span>Repositorio de Facturas para Clientes</span></em>
+                <img src="img/ContendCliente.png" alt="iChat" width="200" height="200"/>
+            </a>
+        </li>
+        <li id="ContendProveedor" onclick="content_proveedores()">
+        	<a href="#" data-rel="show">
+            	<em><span>Repositorio de Facturas de Proveedores</span></em>
+                <img src="img/ContendProveedor.png" alt="Facetime" width="200" height="200"/>
+            </a>
+        </li>       
+        <li id="ContendNomina" onclick="content_nomina()">
+        	<a href="#" data-rel="show">
+            	<em><span>Repositorio de Recibos de Nómina</span></em>
+                <img src="img/ContendNomina.png" alt="Preview" width="200" height="200"/>
+            </a>
+        </li>      
+        
+        <li id="Help_info" onclick="ventana_ayuda()">
+        	<a href="#ayuda_csdocs" data-rel="show">
+            	<em><span>Ayuda CSDocs</span></em>
+                <img src="img/CsDocsHelp.png" alt="Preview" width="200" height="200"/>
+            </a>
+        </li>    
+    </ul>
+</div>
+
+</body>
+</html>

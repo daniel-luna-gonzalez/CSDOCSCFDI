@@ -1,0 +1,230 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>    
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Manager</title>
+    <link href='img/shorticon.png' rel='shortcut icon' type='image/png'>
+    <script type="text/javascript" src="apis/js/jquery-2.0.0.min.js"></script>            
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
+
+    <!--*****************************Dialogos modales******************************* -->
+    <link rel="stylesheet" href="apis/jquery-ui/jquery-ui.css" >
+    <script type="text/javascript" src="apis/dialog/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="apis/dialog/jquery-ui-1.10.4.custom.js"></script>
+    <script type="text/javascript" src="apis/jquery-dialog-extended/jquery.dialogextend.js"></script>
+    <!--*************** Arbol *****************-->
+    <link href="apis/arbol/skin-vista/ui.dynatree.css" rel="stylesheet" type="text/css">
+    <script src="apis/arbol/jquery.dynatree.js" type="text/javascript"></script>
+    
+    <!--*************** Tabla con Paginado y búsqueda *****************-->
+    <link rel="stylesheet" type="text/css" media="screen" href="apis/DataTables/media/css/jquery.dataTables.css"> 
+    <link rel="stylesheet" type="text/css" media="screen" href="apis/DataTables/extensions/TableTools/css/dataTables.tableTools.css">
+    <script type="text/javascript" charset="utf-8" src="apis/jquery.jeditable/jquery.jeditable.js"></script>
+    <script type="text/javascript" charset="utf-8" src="apis/DataTables/media/js/jquery.dataTables.js"></script>
+    <script type="text/javascript" charset="utf-8" src="apis/DataTables/extensions/TableTools/js/dataTables.tableTools.js"></script>
+
+    <!--*********************************Mail************************************** -->
+    <link rel="stylesheet" type="text/css" media="screen" href="css/estilos.css">
+    <link href="css/alta_usuarios.css" rel="stylesheet" type="text/css">
+    <!-- ------------------------------Gráficos-------------------------------->
+    
+    <link rel="stylesheet" type="text/css" media="screen" href="apis/epoch.0.6.0/epoch.min.css">
+    <script type="text/javascript" charset="utf-8" src="apis/d3-master/d3.js"></script>    
+    <script type="text/javascript" charset="utf-8" src="apis/epoch.0.6.0/epoch.min.js"></script>
+        
+    <!--*****************imprimir **************-->    
+    <link rel="stylesheet" type="text/css" href="css/imprimir.css" media="print">
+    <script type="text/javascript" charset="utf-8" src="apis/js/jquery.PrintArea.js"></script>
+
+    <link href="apis/Gritter-master/css/jquery.gritter.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" charset="utf-8" src="apis/Gritter-master/js/jquery.gritter.js"></script>
+    <script type="text/javascript" charset="utf-8" src="apis/Gritter-master/js/jquery.gritter.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/preview_recibo.css">    
+    <script type="text/javascript" src="js/StartSystem.js"></script>
+    <script type="text/javascript" src="js/FieldsValidator.js"></script>
+    <script type="text/javascript" src="js/Login.js"></script>
+    <script type="text/javascript" src="js/EnterpriseManagement.js"></script>
+    <script type="text/javascript" src="js/UsersManager.js"></script>
+    <script type="text/javascript" src="js/Log.js"></script>
+    <script type="text/javascript" src="js/SystemStatus.js"></script>
+    <script type="text/javascript" src="js/ayuda.js"></script>
+    <script type="text/javascript" src="js/SystemManagement.js"></script>        
+    <script type="text/javascript" src="js/EnvironmentData.js"></script>
+    <script type="text/javascript" src="js/Instances.js"></script>
+    <script type="text/javascript" src="js/Global.js"></script>
+    <script type="text/javascript" src="js/Mensajes.js"></script>
+    <script type="text/javascript" src="js/Content.js"></script>
+</head>
+<body>
+
+    <!-- BOOT -->
+
+    <div id="pageLoading">
+            <div class="loading">
+                    <div class="apple-logo"></div>
+            <div class="spinner"></div>
+            </div>
+    </div>
+        <!-- LOGIN -->
+        <div id="pageLogin">
+            <div id="salida_login"></div>
+                <header id="headlogin">
+                    <nav id="menu-dx-login">
+                        <ul>
+                            <li class="wireless"></li>
+                            <li class="time">
+                                <ul>
+                                    <li class="hours"> </li>
+                                    <li class="point">:</li>
+                                    <li class="min"> </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </header>
+            <div id="init_login">
+                <div id="apple_logo_login" class="new-apple-logo"></div>
+                <div id="apple_logo_login2" class="new-apple-logo"></div>
+                <div class="user-avatar" id="user-avatar">
+                    <div id="avatar">
+                        <a href="#hide" class="hide" id="hide"></a>
+                        <a href="#show" class="show" id="show"></a>
+                        <div id="cover"></div>
+                        <div class="ava-css">
+                            <img src="img/Lion.gif" />
+                        </div>
+                        <div class="logName">
+                        </div>
+                        <div id="switch">
+                            <div class="validate">
+                                <form action="#page">
+                                    <input type="text" id="form_user" placeholder="Usuario" onkeyup="if (event.keyCode == 13) login();">                   
+                                    <input type="password" id="form_password" onkeyup="if (event.keyCode == 13) login();" placeholder="Password" />
+                                    <input type="button" class="submit" id="boton_login"  />
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>        
+            </div>      
+                <!--<div id="registro_admin"></div>-->
+        </div>
+    
+        <div>
+            <input type="text" id="id_usr" style="display: none">
+        </div>
+
+        <!-- DESKTOP -->
+        <div id="page"></div>
+        <header id="head">
+            <nav id="menu">
+                <ul>
+                    <li class="apple">
+                        <a href="#all">Apple</a>
+                        <ul class="sublist">
+                            <li id="li_acerca_csdocs" onclick="abrirVentana('http://www.cs-docs.com')"><a href="#about-this-mac" data-rel="show">Acerca de CSDocs CFDI</a></li>
+                            <!-- <li>Software Updates...</li> -->                                         
+                             <li class="divider"></li>
+                             <li>Salir</li>
+                        </ul>
+                    </li>
+                    <li class = "here"><a href="#all">Administración</a>
+                        <ul class="sublist">         
+                             <li id="li_consola_admin"><a href="#consola_administracion" data-rel="show" onclick="show_administrador()">Manager</a></li>
+                        </ul>
+                    </li>                
+                </ul>
+            </nav>
+            <nav id="menu-dx">
+                <ul id="barra_info_sup_der">
+                    <li class="wireless">
+                        <a href="#all">Wireless</a>
+                    </li>
+                    <li class="time">
+                    <ul>
+                        <li id="DateAbbr"> </li>
+                        <li class="hour"> </li>
+                        <li class="point">:</li>
+                        <li class="mins"> </li>
+                    </ul>
+                    </li>
+                    <li class="username" id="barra_sup_username">
+                            <!--<a href="#all">Daniel Luna</a>-->
+                    </li>
+                </ul>
+            </nav>
+        </header>
+    
+        <div id="ventana_resultado" style="display: none"></div>
+    
+<!--**************************************************************************
+    *                    Ventana de Status del Sistema                       *
+    **************************************************************************
+-->
+
+        <div id="MensajeError" style="display: none" class="Mensajes"></div>
+        <div id="MensajeErrorXml" style="display: none" class="Mensajes"></div>
+        <div id="MensajeAdvertencia" style="display: none" class="Mensajes"></div>
+        <div id="MensajeExito" style="display: none" class="Mensajes"></div>
+        <div id="MensajeExitoXml" style="display: none" class="Mensajes"></div>
+        <div id="MensajeConfirmacion" style="display: none" class="Mensajes"></div>
+        <div id="MensajeSalida" style="display: none" class="Mensajes"></div>
+
+<!-- 
+                ****************************
+                * Consola de Administración*
+                ****************************
+-->
+        <div id="consola_administracion" style="display: none">
+            <div id="admin_ventana_trabajo">        
+                    <div id="salida_admin_ventana_trabajo"></div>                    
+            </div>   
+            <div id="menu_consola">
+               <div id="accordion">
+                  <div>  
+                   <h3><a href="#">Administración</a></h3>
+                       <div>
+                           <table class = "TableInsideAccordion">
+                               <tr id="LinkKEnterpriseList">
+                                   <td class = "TdIcon"><img src="img/enterprise.png"></td>
+                                   <td title = "Listado de Empresas">Empresas</td>
+                               </tr>
+                               <tr class = "LinkDisplayUsers">
+                                   <td class = "TdIcon"><img src="img/manager.png"></td>
+                                   <td>Administradores</td>
+                               </tr>
+                           </table>
+                       </div>        
+                   </div>  
+                  <div>  
+                        <h3><a href="#">Almacenamiento</a></h3>
+                        <div>
+                            <table class = "TableInsideAccordion">
+                                <tr class = "LinkDisplayVolumesDetail">
+                                    <td class = "TdIcon"><img src="img/storage.png"></td>
+                                    <td  title="Registro del día">Volúmenes</td>
+                                </tr>
+                            </table>
+                        </div>        
+                   </div> 
+                   <div>  
+                   <h3><a href="#">Reportes</a></h3>
+                       <div>
+                           <table class = "TableInsideAccordion">
+                               <tr class = "">
+                                   <td class = "TdIcon"><img src="img/records.png"></td>
+                                   <td  title="Registro del día">Movimientos</td>
+                               </tr>
+                           </table>
+                       </div>        
+                   </div>  
+               </div>
+           </div>                                      
+        </div>
+
+</body>
+</html>

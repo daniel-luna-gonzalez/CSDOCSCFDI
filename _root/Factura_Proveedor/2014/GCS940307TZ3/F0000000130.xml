@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cfdi:Comprobante 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:cfdi="http://www.sat.gob.mx/cfd/3" 
+	xsi:schemaLocation="http://www.sat.gob.mx/cfd/3 http://www.sat.gob.mx/sitio_internet/cfd/3/cfdv32.xsd" 
+	version="3.2" 
+	serie="A" 
+	folio="1" 
+	fecha="2014-01-23T10:24:25" 
+	sello="WdUqOwg7Yl0SU77Yd6Im//e+zSCvZZhLio/H1wg7uwJdvMeL2IMHTp6Xua8aPkl0LFuWKRpwkc56UiJm1Rg/9GNwerqW18M4dWQ4Nn6PI9lQFzb+zAIHjTCn16UBEhx0EL0q92pbYuW52wGWq3zj85qPvxgXsY/dwL7kFMqXz1s=" formaDePago="PAGO EN UNA SOLA EXHIBICIÓN" noCertificado="00001000000202470655" certificado="MIIEmzCCA4OgAwIBAgIUMDAwMDEwMDAwMDAyMDI0NzA2NTUwDQYJKoZIhvcNAQEFBQAwggGVMTgwNgYDVQQDDC9BLkMuIGRlbCBTZXJ2aWNpbyBkZSBBZG1pbmlzdHJhY2nDs24gVHJpYnV0YXJpYTEvMC0GA1UECgwmU2VydmljaW8gZGUgQWRtaW5pc3RyYWNpw7NuIFRyaWJ1dGFyaWExODA2BgNVBAsML0FkbWluaXN0cmFjacOzbiBkZSBTZWd1cmlkYWQgZGUgbGEgSW5mb3JtYWNpw7NuMSEwHwYJKoZIhvcNAQkBFhJhc2lzbmV0QHNhdC5nb2IubXgxJjAkBgNVBAkMHUF2LiBIaWRhbGdvIDc3LCBDb2wuIEd1ZXJyZXJvMQ4wDAYDVQQRDAUwNjMwMDELMAkGA1UEBhMCTVgxGTAXBgNVBAgMEERpc3RyaXRvIEZlZGVyYWwxFDASBgNVBAcMC0N1YXVodMOpbW9jMRUwEwYDVQQtEwxTQVQ5NzA3MDFOTjMxPjA8BgkqhkiG9w0BCQIML1Jlc3BvbnNhYmxlOiBDZWNpbGlhIEd1aWxsZXJtaW5hIEdhcmPDrWEgR3VlcnJhMB4XDTEyMTEyOTIxMDMzMVoXDTE2MTEyOTIxMDMzMVowgdwxKjAoBgNVBAMTIUFHVUlMQVIgSU5HRU5JRVJPUyBDT05TVUxUT1JFUyBTQzEqMCgGA1UEKRMhQUdVSUxBUiBJTkdFTklFUk9TIENPTlNVTFRPUkVTIFNDMSowKAYDVQQKEyFBR1VJTEFSIElOR0VOSUVST1MgQ09OU1VMVE9SRVMgU0MxJTAjBgNVBC0THEFJQzkxMTExNDM5OSAvIEFVQU03MTA2MjZCUjUxHjAcBgNVBAUTFSAvIEFVQU03MTA2MjZIREZHUlIwOTEPMA0GA1UECxMGbWF0cml6MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC+dIr+uvgNEkh2kbb5NVg1YGiH+2p2DZkIq7BwWfHNXI+SDriItY5r0w0DqEZ3N1t5+R5f/axT7WyNvOVnX0jIBHZhY5s+gLU/yE1E1k+Pu5qp+29MBp7zDSXHhIUfaxfNWF/AVj7kBDwTy9U/oHg64dgcqsjjbM5Z9laoZUTnswIDAQABox0wGzAMBgNVHRMBAf8EAjAAMAsGA1UdDwQEAwIGwDANBgkqhkiG9w0BAQUFAAOCAQEAFYeiUijSpUKXA4PsmqNcbUxzmB2YwPQudSWEllveFby06Qf1VoCa0ieitMmwdz1YiRFljespQew8Fs8GBmoOYV9NzJrYlg8BMwFuSbe8IA/TnoDpacAh/xjfHKTKKpNtuL3jB4pG80QKQKLQ+udgLb8pZHPyhLMOvPmupmV2lc0MDr1CWCit6VRTyocYFFoxQiYhOapAgSaNsF9Xt89+btMP8MzW609NJAD2qD1OM/LUqI/eIY2WplXoj/SKqkarzxXOT7qJkX+UXS936M1SILBEf778X35ZhSeiQKakMGs/oGuDQ42xd/83dCzxF7L60yd6vIw1kPCUMw57lwE/LA==" 
+	condicionesDePago="CONTADO" 
+	subTotal="141000.00" 
+	Moneda="PESO MXN" 
+	total="163560.00" 
+	tipoDeComprobante="ingreso" 
+	metodoDePago="NO IDENTIFICADO" 
+	LugarExpedicion="BENITO JUAREZ, MEXICO DISTRITO FEDERAL" 
+	NumCtaPago="NO IDENTIFICADO">
+	
+	<cfdi:Emisor 
+		rfc="AIC911114399" 
+		nombre="AGUILAR INGENIEROS CONSULTORES S.C."
+	>
+	<cfdi:DomicilioFiscal 
+		calle="GABRIEL MANCERA" 
+		noExterior="1108" 
+		colonia="DEL VALLE" 
+		referencia="ENTRE PILARES Y MATIAS ROMERO" 
+		municipio="BENITO JUAREZ" 
+		estado="DISTRITO FEDERAL" 
+		pais="MEXICO" 
+		codigoPostal="03100"/>
+	<cfdi:RegimenFiscal Regimen="REGIMEN GENERAL DE LEY PERSONAS MORALES"/>
+	</cfdi:Emisor><cfdi:Receptor rfc="HGP1307014D5" nombre="HABITUM GIA PROMOTORA S.A.P.I DE C.V."><cfdi:Domicilio calle="PERIFERICO SUR" noExterior="4249" noInterior="1ER PISO" colonia="JARDINES DE LA MONTAÑA" municipio="TLALPAN" estado="DISTRITO FEDERAL" pais="MEXICO" codigoPostal="14210"/></cfdi:Receptor>
+	
+	<cfdi:Conceptos>
+		<cfdi:Concepto cantidad="1.00" unidad="NO APLICA" noIdentificacion="S2" descripcion="PAGO DEL 15% PARA LA ELABORACION DEL PROYECTO ESTRUCTURAL PARA EL DESARROLLO HABITACIONAL A UBICARSE EN AV. FRANCISCO DEL PASO Y TRONCOSO No.100, COL. SANTA ANITA, DELG. IZTACALCO. 2013-130-B" valorUnitario="141000.00" importe="141000.00"
+		/>
+	</cfdi:Conceptos>
+	
+	<cfdi:Impuestos totalImpuestosTrasladados="22560.00"><cfdi:Traslados><cfdi:Traslado impuesto="IVA" tasa="16.00" importe="22560.00"/></cfdi:Traslados></cfdi:Impuestos>
+	<cfdi:Complemento><tfd:TimbreFiscalDigital xmlns:tfd="http://www.sat.gob.mx/TimbreFiscalDigital" xsi:schemaLocation="http://www.sat.gob.mx/TimbreFiscalDigital http://www.sat.gob.mx/sitio_internet/TimbreFiscalDigital/TimbreFiscalDigital.xsd" version="1.0" FechaTimbrado="2014-01-23T10:27:22" selloCFD="WdUqOwg7Yl0SU77Yd6Im//e+zSCvZZhLio/H1wg7uwJdvMeL2IMHTp6Xua8aPkl0LFuWKRpwkc56UiJm1Rg/9GNwerqW18M4dWQ4Nn6PI9lQFzb+zAIHjTCn16UBEhx0EL0q92pbYuW52wGWq3zj85qPvxgXsY/dwL7kFMqXz1s=" noCertificadoSAT="00001000000300209963" selloSAT="sJ57ij95U9Iean9j2OwQTS8FPQsiSM/1PTMjdFYnL+YbV0Sm6hHWa1+ueQRiUupUgp8JdQ4ID57ixq6hLlaUdyQ4npPZmn20XpjBlwUMVuWHjt0rAgAXR6/GPQE7aDlstyRrX4CUvD3F55uNqmaxTgZPn0/tXp36W2ClpLkCEWM=" UUID="C09124CA-1FBC-46C3-A36E-B4F7CE40F23C"/>
+	</cfdi:Complemento></cfdi:Comprobante>
